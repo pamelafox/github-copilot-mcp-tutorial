@@ -1,0 +1,51 @@
+{
+  "name": "PyCon 2026 MCP Tutorial",
+  "image": "mcr.microsoft.com/devcontainers/python:3-3.13-bookworm",
+  "features": {
+    "ghcr.io/va-h/devcontainers-features/uv:1": {},
+    "ghcr.io/devcontainers/features/node:2": {
+      "version": "22"
+    }
+  },
+  "runArgs": [
+    "--add-host=host.docker.internal:host-gateway"
+  ],
+  "postCreateCommand": "uv sync",
+  "forwardPorts": [8420, 5678, 6274, 6277],
+  "portsAttributes": {
+    "8420": {
+      "label": "Product Store MCP Server",
+      "onAutoForward": "silent"
+    },
+    "5678": {
+      "label": "debugpy",
+      "onAutoForward": "silent"
+    },
+    "6274": {
+      "label": "MCP Inspector UI",
+      "visibility": "public"
+    },
+    "6277": {
+      "label": "MCP Inspector Proxy",
+      "visibility": "public",
+      "onAutoForward": "silent"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "github.copilot",
+        "github.copilot-chat"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python",
+        "python.terminal.activateEnvironment": true,
+        "chat.mcp.autostart": "never"
+      }
+    }
+  },
+  "remoteUser": "vscode"
+}

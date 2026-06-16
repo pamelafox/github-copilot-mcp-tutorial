@@ -1,0 +1,28 @@
+[project]
+name = "pycon2026-mcp-tutorial"
+version = "0.1.0"
+description = "A workshop to build a Python FastMCP server"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp[apps]>=3.2.4",
+    "azure-identity>=1.25.1",
+    "langchain>=1.2.15",
+    "langchain-openai>=1.1.12",
+    "langchain-mcp-adapters>=0.2.2",
+    "agent-framework-core==1.0.1",
+    "agent-framework-openai==1.0.1",
+    "pydantic-ai>=1.80.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.0",
+    "prek>=0.1.0",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+lint.select = ["E", "F", "I", "UP"]
+lint.ignore = ["D203"]
