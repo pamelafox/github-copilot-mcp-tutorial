@@ -1,11 +1,10 @@
-# Exercise 1: MCP servers and GitHub Copilot
+# Exercise 1: Connect to an MCP server
 
-In this exercise, you'll set up a development environment, connect GitHub Copilot to public MCP servers, and then try an authenticated MCP server.
+In this exercise, you'll set up a development environment and connect GitHub Copilot to a public MCP server.
 
 - [Step 1: Set up your development environment](#step-1-set-up-your-development-environment)
 - [Step 2: Set up GitHub Copilot](#step-2-set-up-github-copilot)
-- [Step 3: Use a public MCP server (no auth)](#step-3-use-a-public-mcp-server-no-auth)
-- [Step 4: Use an authenticated MCP server (GitHub)](#step-4-use-an-authenticated-mcp-server-github)
+- [Step 3: Use a public MCP server](#step-3-use-a-public-mcp-server)
 
 ---
 
@@ -96,7 +95,7 @@ Set up **one** of the GitHub Copilot options below: [GitHub Copilot in VS Code /
    ![Screenshot of chat box with "Agent" mode selected](docs/screenshot_copilot_agent.png)
 
 3. Send a test message "Hello" to confirm the agent is working.
-4. Move on to [Step 3](#step-3-use-a-public-mcp-server-no-auth)
+4. Move on to [Step 3](#step-3-use-a-public-mcp-server)
 
 ### Option B: GitHub Copilot CLI
 
@@ -109,11 +108,11 @@ Set up **one** of the GitHub Copilot options below: [GitHub Copilot in VS Code /
    copilot
    ```
 
-3. Move on to [Step 3](#step-3-use-a-public-mcp-server-no-auth)
+3. Move on to [Step 3](#step-3-use-a-public-mcp-server)
 
 ---
 
-## Step 3: Use a public MCP server (no auth)
+## Step 3: Use a public MCP server
 
 Now connect GitHub Copilot to a **public MCP server** that requires no authentication. The examples below use the MS Learn documentation MCP server, but you can also try other options:
 
@@ -169,53 +168,4 @@ Follow the instructions for your agent: [GitHub Copilot in VS Code](#github-copi
 
    ```bash
    copilot -i "What kind of GPUs are available for Azure Container Apps?"
-   ```
-
----
-
-## Step 4: Use an authenticated MCP server (GitHub)
-
-The goal of this step is to show you what it's like to use an MCP server that requires authentication via OAuth. We'll use the [GitHub MCP server](https://github.com/github/github-mcp-server), which gives your agent access to GitHub repositories, issues, pull requests, and more.
-
-### GitHub Copilot in VS Code with authenticated server
-
-1. Make sure that `.vscode/mcp.json` contains a server configuration pointed at the GitHub MCP server URL:
-
-    ```json
-    {
-       "servers": {
-          "github": {
-             "type": "http",
-             "url": "https://api.githubcopilot.com/mcp/"
-          }
-       }
-    }
-    ```
-
-2. Select "Start" on the server in the config file.
-
-3. A prompt will pop up asking whether the MCP server can authenticate to GitHub. Select **Allow**.
-
-4. Once authenticated, click the tools icon (🔧) and confirm the GitHub tools are listed and enabled.
-
-5. Ask a question that requires context from GitHub:
-
-    ```text
-    What are the most recent issues on the pamelafox/github-copilot-mcp-tutorial repo?
-    ```
-
-### GitHub Copilot CLI with authenticated server
-
-1. Add the GitHub MCP server using the CLI:
-
-   ```bash
-   copilot mcp add --transport http github https://api.githubcopilot.com/mcp/
-   ```
-
-2. Open Copilot CLI with `copilot`. It should prompt you to authenticate with GitHub if needed.
-
-3. Once authenticated, ask a question that requires context from GitHub:
-
-   ```text
-   What are the most recent issues on the pamelafox/github-copilot-mcp-tutorial repo?
    ```

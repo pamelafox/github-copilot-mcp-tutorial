@@ -857,6 +857,45 @@ wheels = [
 ]
 
 [[package]]
+name = "github-copilot-mcp-tutorial"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "agent-framework-core" },
+    { name = "agent-framework-openai" },
+    { name = "azure-identity" },
+    { name = "fastmcp", extra = ["apps"] },
+    { name = "langchain" },
+    { name = "langchain-mcp-adapters" },
+    { name = "langchain-openai" },
+    { name = "pydantic-ai" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "prek" },
+    { name = "ruff" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "agent-framework-core", specifier = "==1.0.1" },
+    { name = "agent-framework-openai", specifier = "==1.0.1" },
+    { name = "azure-identity", specifier = ">=1.25.1" },
+    { name = "fastmcp", extras = ["apps"], specifier = ">=3.2.4" },
+    { name = "langchain", specifier = ">=1.2.15" },
+    { name = "langchain-mcp-adapters", specifier = ">=0.2.2" },
+    { name = "langchain-openai", specifier = ">=1.1.12" },
+    { name = "pydantic-ai", specifier = ">=1.80.0" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "prek", specifier = ">=0.1.0" },
+    { name = "ruff", specifier = ">=0.8.0" },
+]
+
+[[package]]
 name = "google-auth"
 version = "2.49.2"
 source = { registry = "https://pypi.org/simple" }
@@ -2158,45 +2197,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/e9/e6/78ebbb10a8c8e4b61a59249394a4a594c1a7af95593dc933a349c8d00964/pyasn1_modules-0.4.2.tar.gz", hash = "sha256:677091de870a80aae844b1ca6134f54652fa2c8c5a52aa396440ac3106e941e6", size = 307892, upload-time = "2025-03-28T02:41:22.17Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/47/8d/d529b5d697919ba8c11ad626e835d4039be708a35b0d22de83a269a6682c/pyasn1_modules-0.4.2-py3-none-any.whl", hash = "sha256:29253a9207ce32b64c3ac6600edc75368f98473906e8fd1043bd6b5b1de2c14a", size = 181259, upload-time = "2025-03-28T02:41:19.028Z" },
-]
-
-[[package]]
-name = "pycon2026-mcp-tutorial"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "agent-framework-core" },
-    { name = "agent-framework-openai" },
-    { name = "azure-identity" },
-    { name = "fastmcp", extra = ["apps"] },
-    { name = "langchain" },
-    { name = "langchain-mcp-adapters" },
-    { name = "langchain-openai" },
-    { name = "pydantic-ai" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "prek" },
-    { name = "ruff" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "agent-framework-core", specifier = "==1.0.1" },
-    { name = "agent-framework-openai", specifier = "==1.0.1" },
-    { name = "azure-identity", specifier = ">=1.25.1" },
-    { name = "fastmcp", extras = ["apps"], specifier = ">=3.2.4" },
-    { name = "langchain", specifier = ">=1.2.15" },
-    { name = "langchain-mcp-adapters", specifier = ">=0.2.2" },
-    { name = "langchain-openai", specifier = ">=1.1.12" },
-    { name = "pydantic-ai", specifier = ">=1.80.0" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "prek", specifier = ">=0.1.0" },
-    { name = "ruff", specifier = ">=0.8.0" },
 ]
 
 [[package]]

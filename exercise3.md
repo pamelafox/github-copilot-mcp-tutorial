@@ -7,7 +7,7 @@ In this exercise, you'll build an MCP server from scratch using [FastMCP](https:
 - [Step 3: Add a tool to list products](#step-3-add-a-tool-to-list-products)
 - [Step 4: Add a tool to buy a product](#step-4-add-a-tool-to-buy-a-product)
 - [Step 5: Run and test the server](#step-5-run-and-test-the-server)
-- [Step 6: Test with your coding agent](#step-6-test-with-your-coding-agent)
+- [Step 6: Test with GitHub Copilot](#step-6-test-with-github-copilot)
 - [Step 7: Test with MCP Inspector](#step-7-test-with-mcp-inspector)
 - [Step 8: Test with MCPJam](#step-8-test-with-mcpjam)
 - [Take it further](#take-it-further)
@@ -125,9 +125,9 @@ The server is now listening at `http://localhost:8420/mcp`.
 
 ---
 
-## Step 6: Test with your coding agent
+## Step 6: Test with GitHub Copilot
 
-With the server running, add it to your coding agent from Exercise 1.
+With the server running, add it to GitHub Copilot from Exercise 1.
 
 ### GitHub Copilot in VS Code
 
@@ -162,20 +162,6 @@ With the server running, add it to your coding agent from Exercise 1.
 
    ```bash
    copilot -i "What products are available in the store?"
-   ```
-
-### Claude Code
-
-1. Add the MCP server using this command:
-
-    ```bash
-    claude mcp add --transport http product-store http://localhost:8420/mcp
-    ```
-
-2. Try a prompt like:
-
-   ```bash
-   claude "What products are available in the store?"
    ```
 
 ---

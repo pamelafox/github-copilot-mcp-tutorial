@@ -380,10 +380,10 @@
 			<div class="slides">
 
 				<section class="heading-only title-slide">
-					<p>PyCon 2026 Tutorial</p>
+					<p>GitHub Copilot Day Workshop</p>
 					<h1>Build your first MCP server in Python</h1>
 					<h3 style="margin-top: 42px;">Pamela Fox</h3>
-					<p style="font-size: 0.72em;"><a href="https://pamelafox.github.io/pycon2026-mcp-tutorial/">pamelafox.github.io/pycon2026-mcp-tutorial</a></p>
+					<p style="font-size: 0.72em;"><a href="https://pamelafox.github.io/github-copilot-mcp-tutorial/">pamelafox.github.io/github-copilot-mcp-tutorial</a></p>
 					<aside class="notes">
 						Set the expectation that this is a hands-on workshop. The goal is not just to understand MCP, but to leave with running code.
 					</aside>
@@ -435,8 +435,8 @@
 					<ul class="tight">
 						<li>Name</li>
                         <li>Location</li>
-                        <li>Is this your first PyCon, or have you attended before?</li>
-                        <li>What are you excited for at PyCon 2026?</li>
+                        <li>Have you used GitHub Copilot before?</li>
+                        <li>What are you hoping to learn at GitHub Copilot Day?</li>
                         <li>Make up a new meaning for "<strong>MCP</strong>" (e.g. "<strong>M</strong>ore <strong>C</strong>offee <strong>P</strong>lease") and write it on a sticky note.</li>
 					</ul>
 				</section>
@@ -448,17 +448,14 @@
 							<tr><th>Part</th><th>Time</th></tr>
 						</thead>
 						<tbody>
-							<tr><td>Welcome</td><td>10 min</td></tr>
-							<tr><td>MCP 101</td><td>15 min</td></tr>
-							<tr><td>Building agents</td><td>10 min</td></tr>
-							<tr><td>Exercise: Use existing MCP servers</td><td>30 min</td></tr>
-							<tr><td>Building an MCP server</td><td>15 min</td></tr>
-							<tr><td>Exercise: Build your own server</td><td>40 min</td></tr>
-							<tr><td>☕️ break</td><td>20 min</td></tr>
-							<tr><td>Advanced server features</td><td>10 min</td></tr>
-							<tr><td>Exercise: Add visual UI and confirmation</td><td>20 min</td></tr>
-							<tr><td>Authenticated servers</td><td>15 min</td></tr>
-							<tr><td>Exercise: Add authentication</td><td>20 min</td></tr>
+							<tr><td>Welcome</td><td>8 min</td></tr>
+							<tr><td>MCP 101</td><td>12 min</td></tr>
+							<tr><td>Exercise: Connect to MCP servers</td><td>12 min</td></tr>
+							<tr><td>Exercise: Use the GitHub MCP server</td><td>15 min</td></tr>
+							<tr><td>Building an MCP server</td><td>10 min</td></tr>
+							<tr><td>Exercise: Build your own server</td><td>32 min</td></tr>
+							<tr><td>Advanced server features</td><td>8 min</td></tr>
+							<tr><td>Exercise: Add visual UI and confirmation</td><td>13 min</td></tr>
 							<tr><td>Next steps</td><td>5 min</td></tr>
 						</tbody>
 					</table>
@@ -528,7 +525,7 @@
 
 					<p>You've probably used an AI agent...</p>
 					<p>
-						<strong>Coding agents</strong> like GitHub Copilot and Claude Code are AI agents.<br>
+						<strong>Coding agents</strong> like GitHub Copilot are AI agents.<br>
 						<strong>Chatbots</strong> like ChatGPT also have agentic loops now.<br>
 						You can also build your own agents in Python.</p>
 
@@ -792,20 +789,12 @@
 							<p style="font-size: 0.82em; margin: 0 0 10px; font-weight: 600; color: #32115f;">Clients with the strongest support:</p>
 							<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
 								<div style="background: rgba(255,255,255,0.7); border-radius: 10px; padding: 12px 8px; text-align: center; border: 1px solid #d8cff0;">
-									<div style="font-size: 1.7em; margin-bottom: 3px;">🤖</div>
-									<strong style="font-size: 0.82em; line-height: 1.15; display: inline-block;">Claude Code</strong>
-								</div>
-								<div style="background: rgba(255,255,255,0.7); border-radius: 10px; padding: 12px 8px; text-align: center; border: 1px solid #d8cff0;">
-									<div style="font-size: 1.7em; margin-bottom: 3px;">🖥️</div>
-									<strong style="font-size: 0.82em; line-height: 1.15; display: inline-block;">Claude Desktop</strong>
-								</div>
-								<div style="background: rgba(255,255,255,0.7); border-radius: 10px; padding: 12px 8px; text-align: center; border: 1px solid #d8cff0;">
 									<div style="font-size: 1.7em; margin-bottom: 3px;">💻</div>
 									<strong style="font-size: 0.82em; line-height: 1.15; display: inline-block;">VS Code + GitHub Copilot</strong>
 								</div>
 								<div style="background: rgba(255,255,255,0.7); border-radius: 10px; padding: 12px 8px; text-align: center; border: 1px solid #d8cff0;">
-									<div style="font-size: 1.7em; margin-bottom: 3px;">🪿</div>
-									<strong style="font-size: 0.82em; line-height: 1.15; display: inline-block;">goose</strong>
+									<div style="font-size: 1.7em; margin-bottom: 3px;">⌨️</div>
+									<strong style="font-size: 0.82em; line-height: 1.15; display: inline-block;">GitHub Copilot CLI</strong>
 								</div>
 								<div style="background: rgba(255,255,255,0.7); border-radius: 10px; padding: 12px 8px; text-align: center; border: 1px solid #d8cff0;">
 									<div style="font-size: 1.7em; margin-bottom: 3px;">🔬</div>
@@ -814,6 +803,14 @@
 								<div style="background: rgba(255,255,255,0.7); border-radius: 10px; padding: 12px 8px; text-align: center; border: 1px solid #d8cff0;">
 									<div style="font-size: 1.7em; margin-bottom: 3px;">🔍</div>
 									<strong style="font-size: 0.82em; line-height: 1.15; display: inline-block;">MCP Inspector</strong>
+								</div>
+								<div style="background: rgba(255,255,255,0.7); border-radius: 10px; padding: 12px 8px; text-align: center; border: 1px solid #d8cff0;">
+									<div style="font-size: 1.7em; margin-bottom: 3px;">🤖</div>
+									<strong style="font-size: 0.82em; line-height: 1.15; display: inline-block;">Claude Code</strong>
+								</div>
+								<div style="background: rgba(255,255,255,0.7); border-radius: 10px; padding: 12px 8px; text-align: center; border: 1px solid #d8cff0;">
+									<div style="font-size: 1.7em; margin-bottom: 3px;">🖥️</div>
+									<strong style="font-size: 0.82em; line-height: 1.15; display: inline-block;">Claude Desktop</strong>
 								</div>
 							</div>
 						</div>
@@ -835,140 +832,27 @@
 						</div>
 					</div>
 					<aside class="notes">
-						Tools are the universal denominator — every client supports them. VS Code and Claude Code have the strongest full-spec support including OAuth. MCPJam and MCP Inspector are testing tools rather than production agents.
-					</aside>
-				</section>
-
-				<section class="heading-only">
-					<h2>Coding agents + MCP</h2>
-					<aside class="notes">
+						Tools are the universal denominator — every client supports them. VS Code with GitHub Copilot has strong full-spec support including OAuth. MCPJam and MCP Inspector are testing tools rather than production agents.
 					</aside>
 				</section>
 
 				<section>
-					<h3>Coding agent: VS Code + GitHub Copilot</h3>
-					<div style="display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr); gap: 30px; align-items: stretch;">
-						<div class="client-panel">
-							<h4>1. Add MCP servers</h4>
-							<p>Install from Extensions:</p>
-							<img class="client-shot" src="screenshot_vscode_mcpextensions2.png" alt="VS Code extensions marketplace search results for MCP servers" style="width: 68%; margin: 0 0 0.7em 0;">
-							<p>Or configure <code>.vscode/mcp.json</code> file:</p>
-								<pre style="width: 95%; padding: 8px 10px; background: rgba(255, 219, 136, 0.28);"><code class="language-json" style="font-size: 0.9em; line-height: 1.2;">{
-  "servers": {
-    "github": {
-      "type": "http",
-      "url": "https://api.githubcopilot.com/mcp/"
-    }
-  }
-}</code></pre>
-						</div>
-						<div class="client-panel">
-							<h4>2. Use from Copilot</h4>
-							<p>Once added, tools appear in chat with approvals and structured results.</p>
-							<img class="client-shot" src="screenshot_vscode_githubmcp.png" alt="GitHub Copilot chat using a GitHub MCP server tool in VS Code" style="width: 75%; margin: 0 auto;">
-						</div>
-					</div>
-					<aside class="notes">
-						Demo this live in VS Code. Show both ways to add an MCP server: install one from Extensions, then point out the <code>.vscode/mcp.json</code> configuration option. After that, open Copilot Chat and show the MCP tools available with approval prompts/results.
-					</aside>
-				</section>
-
-				<section>
-					<h3>Coding agent: Claude Code</h3>
-					<p class="lead" style="max-width: none; margin: 0 0 24px;">Claude Code connects terminal-first coding workflows to MCP servers.</p>
-					<div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 30px; align-items: stretch;">
-						<div class="client-panel">
-							<h4>1. Add MCP servers</h4>
-							<p>Add remote servers from the CLI:</p>
-							<pre style="width: 95%; padding: 10px 12px; background: rgba(255, 219, 136, 0.28);"><code class="language-bash" style="font-size: 0.82em; line-height: 1.25;">claude mcp add \
-	--transport http huggingface \
-	'https://huggingface.co/mcp?login'</code></pre>
-							<p style="margin-top: 0.75em;">Then confirm what Claude Code can see:</p>
-							<pre style="width: 70%; padding: 10px 12px; background: rgba(255, 219, 136, 0.28);"><code class="language-bash" style="font-size: 0.82em; line-height: 1.25;">claude mcp list</code></pre>
-
-                            <p style="margin-top: 0.75em;">For authenticated servers, you will need to start up <code>claude</code> to go through the auth flow.</p>
-						</div>
-						<div class="client-panel">
-							<h4>2. Use from Claude Code</h4>
-							<p>Ask in the terminal, and Claude Code can call Hugging Face tools through MCP.</p>
-							<pre style="width: 95%; padding: 10px 12px; background: rgba(33, 232, 243, 0.12);"><code class="language-text" style="font-size: 0.76em; line-height: 1.26;">&gt; what research papers are in 2026
-	about vector retrieval?
-
-⏺ huggingface - Paper Search (MCP)
-	query: "vector retrieval 2026"
-	concise_only: true
-
-120 papers matched the query.
-Here are the first 12 results.
-
-## Foundations of Vector Retrieval</code></pre>
-						</div>
-					</div>
-					<aside class="notes">
-						Demo this live in Claude Code. Run the <code>claude mcp add</code> command for Hugging Face, then start <code>claude</code> to complete the login/auth flow. Ask the paper-search question and show Claude Code calling the Hugging Face MCP tool in the terminal.
-					</aside>
-				</section>
-
-				<section class="heading-only">
-					<h2>Python agents + MCP</h2>
-					<aside class="notes">
-					</aside>
-				</section>
-
-				<section>
-					<h3>Building agents with frameworks</h3>
-					<p class="lead">An agent framework coordinates model calls, tool schemas, tool execution, memory or state, and final responses.</p>
-					<table style="font-size: 0.9em; margin-top: 16px;">
-						<thead>
-							<tr><th>Framework</th><th>Description</th></tr>
-						</thead>
-						<tbody>
-							<tr><td><strong>langchain v1</strong></td><td>An agent-centric framework built on top of LangGraph, with optional LangSmith monitoring.</td></tr>
-							<tr><td><strong>pydantic-ai</strong></td><td>A flexible framework designed for type safety and observability, from the creators of Pydantic.</td></tr>
-							<tr><td><strong>agent-framework</strong></td><td>A framework from Microsoft with support for agentic patterns and full integration with Azure offerings. Successor to AutoGen and Semantic Kernel.</td></tr>
-
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h3>Pydantic AI + MCP</h3>
-					<pre><code style="font-size: 1em" class="language-python" data-trim data-noescape>
-from pydantic_ai import Agent
-from pydantic_ai.mcp import MCPServerStreamableHTTP
-from pydantic_ai.models.openai import OpenAIChatModel
-
-model = OpenAIChatModel("gpt-5.5")
-server = MCPServerStreamableHTTP(url="https://learn.microsoft.com/api/mcp")
-
-agent = Agent(model, toolsets=[server],
-  system_prompt="Use available tools to answer questions.")
-
-result = await agent.run("How do I use DefaultAzureCredential in Python?")
-print(result.output)
-					</code></pre>
-					<aside class="notes">
-						The framework handles model calls, MCP tool discovery, tool execution, and passing results back into the agent loop. Exercise 2 has complete versions for several frameworks.
-					</aside>
-				</section>
-
-				<section>
-					<div style="position: absolute; top: 38px; right: 58px; font-size: 0.72em; font-weight: 700; color: var(--deck-heading); padding: 8px 14px; border: 2px solid rgba(255, 50, 200, 0.45); border-radius: 8px; background: rgba(255, 255, 255, 0.72);">⏳ 30 min</div>
+					<div style="position: absolute; top: 38px; right: 58px; font-size: 0.72em; font-weight: 700; color: var(--deck-heading); padding: 8px 14px; border: 2px solid rgba(255, 50, 200, 0.45); border-radius: 8px; background: rgba(255, 255, 255, 0.72);">⏳ 22 min</div>
 					<h3>Exercise time</h3>
 					<p><strong>Exercise 1:</strong><br>
-                        Connect your coding agent to public MCP servers<br>
-                        <a href="https://tinyurl.com/pyconmcp-ex1" target="_blank"><code>tinyurl.com/pyconmcp-ex1</code></a>
+                        Connect GitHub Copilot to a public MCP server<br>
+                        <a href="https://github.com/pamelafox/github-copilot-mcp-tutorial/blob/main/exercise1_connect.md" target="_blank"><code>github.com/.../exercise1_connect.md</code></a>
                         </p>
-					<div style="margin-top:40px">
-						<p><strong>Bonus: Exercise 2</strong><br>
-                        Build a Python agent that uses MCP servers<br>
-                        <a href="https://tinyurl.com/pyconmcp-ex2" target="_blank"><code>tinyurl.com/pyconmcp-ex2</code></a>
+					<div style="margin-top:24px">
+						<p><strong>Exercise 2:</strong><br>
+                        Use the GitHub MCP server to find and fix issues<br>
+                        <a href="https://github.com/pamelafox/github-copilot-mcp-tutorial/blob/main/exercise2_github.md" target="_blank"><code>github.com/.../exercise2_github.md</code></a>
                         </p>
 					</div>
 					<br>
                     <p>🙋🏽‍♀️ 🙋🏻‍♂️ 🙋🏿 🙋🏼‍♀️ 🙋🏾‍♂️ Got a question? Raise your hand, we'll come around!</p>
 					<aside class="notes">
-						Give attendees time to work through exercise1.md. Mention exercise2.md as an optional bonus for anyone who wants to build a programmatic Python agent that connects to MCP servers.
+						Give attendees time to work through exercise1_connect.md and exercise2_github.md.
 					</aside>
 				</section>
 
@@ -1175,11 +1059,11 @@ def analyze_spending_prompt(
 				</section>
 
 				<section>
-					<div style="position: absolute; top: 38px; right: 58px; font-size: 0.72em; font-weight: 700; color: var(--deck-heading); padding: 8px 14px; border: 2px solid rgba(255, 50, 200, 0.45); border-radius: 8px; background: rgba(255, 255, 255, 0.72);">⏳ 40 min</div>
+					<div style="position: absolute; top: 38px; right: 58px; font-size: 0.72em; font-weight: 700; color: var(--deck-heading); padding: 8px 14px; border: 2px solid rgba(255, 50, 200, 0.45); border-radius: 8px; background: rgba(255, 255, 255, 0.72);">⏳ 32 min</div>
 					<h3>Exercise time</h3>
 					<p><strong>Exercise 3:</strong><br>
 						Build your own product-store MCP server<br>
-						<a href="https://tinyurl.com/pyconmcp-ex3" target="_blank"><code>tinyurl.com/pyconmcp-ex3</code></a>
+						<a href="https://github.com/pamelafox/github-copilot-mcp-tutorial/blob/main/exercise3.md" target="_blank"><code>github.com/.../exercise3.md</code></a>
 					</p>
 
 					<p style="margin-top: 100px;">🙋🏽‍♀️ 🙋🏻‍♂️ 🙋🏿 🙋🏼‍♀️ 🙋🏾‍♂️ Got a question? Raise your hand, we'll come around!</p>
@@ -1535,528 +1419,16 @@ def render_expenses() -> PrefabApp:
 				</section>
 
 				<section>
-					<div style="position: absolute; top: 38px; right: 58px; font-size: 0.72em; font-weight: 700; color: var(--deck-heading); padding: 8px 14px; border: 2px solid rgba(255, 50, 200, 0.45); border-radius: 8px; background: rgba(255, 255, 255, 0.72);">⏳ 20 min</div>
+					<div style="position: absolute; top: 38px; right: 58px; font-size: 0.72em; font-weight: 700; color: var(--deck-heading); padding: 8px 14px; border: 2px solid rgba(255, 50, 200, 0.45); border-radius: 8px; background: rgba(255, 255, 255, 0.72);">⏳ 13 min</div>
 					<h3>Exercise time</h3>
 					<p><strong>Exercise 4:</strong><br>
 						Add visual UI and purchase confirmation<br>
-						<a href="https://tinyurl.com/pyconmcp-ex4" target="_blank"><code>tinyurl.com/pyconmcp-ex4</code></a>
+						<a href="https://github.com/pamelafox/github-copilot-mcp-tutorial/blob/main/exercise4.md" target="_blank"><code>github.com/.../exercise4.md</code></a>
 					</p>
 
 					<p style="margin-top: 100px;">🙋🏽‍♀️ 🙋🏻‍♂️ 🙋🏿 🙋🏼‍♀️ 🙋🏾‍♂️ Got a question? Raise your hand, we'll come around!</p>
 					<aside class="notes">
 						Give attendees time to work through exercise4.md. Remind them to restart the server after adding Prefab UI tools and elicitation.
-					</aside>
-				</section>
-
-				<section class="heading-only">
-					<h2>Authenticated MCP servers</h2>
-					<aside class="notes">When tools access user-specific data, the server needs to know who is calling.</aside>
-				</section>
-
-				<section>
-					<h3>Three approaches to restricting access</h3>
-					<p class="lead" style="font-size: 0.82em; margin-bottom: 22px;">Pick the access model that matches the server boundary and the data risk.</p>
-					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;">
-						<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 18px 20px; min-height: 360px;">
-							<svg viewBox="0 0 300 150" role="img" aria-label="Private network access diagram" style="width: 100%; height: auto; display: block; margin-bottom: 14px;">
-								<defs>
-									<marker id="private-network-arrow" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,5 L6,2.5 z" fill="#0086a3"/></marker>
-								</defs>
-								<rect x="88" y="18" width="188" height="112" rx="12" fill="none" stroke="#b8b0c5" stroke-width="2.4" stroke-dasharray="8 6"/>
-								<text x="182" y="42" text-anchor="middle" font-size="14" font-weight="700" fill="#4e3f60">Private network</text>
-								<rect x="20" y="62" width="58" height="42" rx="8" fill="rgba(0, 134, 163, 0.12)" stroke="#0086a3" stroke-width="2"/>
-								<text x="49" y="88" text-anchor="middle" font-size="13" font-weight="700" fill="#0086a3">Client</text>
-								<line x1="78" y1="83" x2="142" y2="83" stroke="#0086a3" stroke-width="2.2" marker-end="url(#private-network-arrow)"/>
-								<rect x="142" y="58" width="118" height="54" rx="8" fill="rgba(225, 149, 42, 0.14)" stroke="#e1952a" stroke-width="2"/>
-								<image href="Model_Context_Protocol_logo.svg" x="154" y="70" width="30" height="30"/>
-								<text x="222" y="80" text-anchor="middle" font-size="12" font-weight="700" fill="#e1952a">MCP</text>
-								<text x="222" y="94" text-anchor="middle" font-size="12" font-weight="700" fill="#e1952a">server</text>
-							</svg>
-							<p style="font-size: 0.76em; margin: 0 0 12px; color: #32115f;"><strong>Private network</strong></p>
-							<p style="font-size: 0.62em; line-height: 1.28; margin: 0 0 14px; color: #4e3f60;">Deploy inside a virtual network and disable public ingress.</p>
-							<p style="font-size: 0.56em; line-height: 1.26; margin: 0; color: #6b4d78;"><strong>Best for:</strong> internal services where every allowed client is already on the network.</p>
-						</div>
-						<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 18px 20px; min-height: 360px;">
-							<svg viewBox="0 0 300 150" role="img" aria-label="Key-based access diagram" style="width: 100%; height: auto; display: block; margin-bottom: 14px;">
-								<defs>
-									<marker id="key-access-arrow" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,5 L6,2.5 z" fill="#0086a3"/></marker>
-								</defs>
-								<rect x="20" y="54" width="58" height="42" rx="8" fill="rgba(0, 134, 163, 0.12)" stroke="#0086a3" stroke-width="2"/>
-								<text x="49" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#0086a3">Client</text>
-								<rect x="112" y="52" width="76" height="46" rx="8" fill="rgba(114, 168, 67, 0.12)" stroke="#72a843" stroke-width="2"/>
-								<text x="150" y="73" text-anchor="middle" font-size="18" fill="#32115f">key</text>
-								<text x="150" y="90" text-anchor="middle" font-size="11" fill="#4e3f60">header</text>
-								<line x1="78" y1="75" x2="112" y2="75" stroke="#0086a3" stroke-width="2.2" marker-end="url(#key-access-arrow)"/>
-								<line x1="188" y1="75" x2="218" y2="75" stroke="#0086a3" stroke-width="2.2" marker-end="url(#key-access-arrow)"/>
-								<rect x="218" y="48" width="76" height="54" rx="8" fill="rgba(225, 149, 42, 0.14)" stroke="#e1952a" stroke-width="2"/>
-								<image href="Model_Context_Protocol_logo.svg" x="226" y="60" width="30" height="30"/>
-								<text x="273" y="79" text-anchor="middle" font-size="11" font-weight="700" fill="#e1952a">MCP</text>
-								<text x="273" y="92" text-anchor="middle" font-size="11" font-weight="700" fill="#e1952a">server</text>
-							</svg>
-							<p style="font-size: 0.76em; margin: 0 0 12px; color: #32115f;"><strong>Key-based access</strong></p>
-							<p style="font-size: 0.62em; line-height: 1.28; margin: 0 0 14px; color: #4e3f60;">Clients send a key in a header, and the server verifies it before responding.</p>
-							<p style="font-size: 0.56em; line-height: 1.26; margin: 0; color: #6b4d78;"><strong>Watch out:</strong> keys can be copied, leaked, or shared outside the intended user.</p>
-						</div>
-						<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 18px 20px; min-height: 360px;">
-							<svg viewBox="0 0 300 150" role="img" aria-label="OAuth-based access diagram" style="width: 100%; height: auto; display: block; margin-bottom: 14px;">
-								<defs>
-									<marker id="oauth-card-arrow" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,5 L6,2.5 z" fill="#0086a3"/></marker>
-									<marker id="oauth-card-dashed-arrow" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,5 L6,2.5 z" fill="#72a843"/></marker>
-								</defs>
-								<rect x="18" y="92" width="56" height="38" rx="8" fill="rgba(0, 134, 163, 0.12)" stroke="#0086a3" stroke-width="2"/>
-								<text x="46" y="116" text-anchor="middle" font-size="12" font-weight="700" fill="#0086a3">Client</text>
-								<rect x="112" y="18" width="78" height="42" rx="8" fill="rgba(114, 168, 67, 0.12)" stroke="#72a843" stroke-width="2"/>
-								<text x="151" y="35" text-anchor="middle" font-size="12" font-weight="700" fill="#72a843">Auth</text>
-								<text x="151" y="50" text-anchor="middle" font-size="11" fill="#72a843">server</text>
-								<rect x="216" y="86" width="78" height="50" rx="8" fill="rgba(225, 149, 42, 0.14)" stroke="#e1952a" stroke-width="2"/>
-								<image href="Model_Context_Protocol_logo.svg" x="224" y="97" width="28" height="28"/>
-								<text x="273" y="109" text-anchor="middle" font-size="11" font-weight="700" fill="#e1952a">MCP</text>
-								<text x="273" y="122" text-anchor="middle" font-size="11" font-weight="700" fill="#e1952a">server</text>
-								<line x1="74" y1="101" x2="123" y2="60" stroke="#0086a3" stroke-width="2.1" marker-end="url(#oauth-card-arrow)"/>
-								<text x="78" y="66" text-anchor="middle" font-size="11" fill="#0086a3">login</text>
-								<line x1="176" y1="60" x2="216" y2="92" stroke="#72a843" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#oauth-card-dashed-arrow)"/>
-								<text x="222" y="74" text-anchor="middle" font-size="11" fill="#72a843">token</text>
-								<line x1="74" y1="111" x2="216" y2="111" stroke="#0086a3" stroke-width="2.2" marker-end="url(#oauth-card-arrow)"/>
-								<text x="147" y="104" text-anchor="middle" font-size="11" fill="#0086a3">bearer token</text>
-							</svg>
-							<p style="font-size: 0.76em; margin: 0 0 12px; color: #32115f;"><strong>OAuth-based access</strong></p>
-							<p style="font-size: 0.62em; line-height: 1.28; margin: 0 0 14px; color: #4e3f60;">Clients obtain a user access token and send it as bearer authorization.</p>
-							<p style="font-size: 0.56em; line-height: 1.26; margin: 0; color: #6b4d78;"><strong>Best for:</strong> user-specific data and servers that need identity-aware authorization.</p>
-						</div>
-					</div>
-					<aside class="notes">
-						There are three common ways to restrict MCP servers. Private networking is strongest when the server is only for internal clients. Keys are simple, but a key usually identifies access to the service more than the actual human user. OAuth is the right fit when tools access user-specific data and the server needs to know who is calling.
-					</aside>
-				</section>
-
-				<section>
-					<h3>OAuth request/response</h3>
-					<p style="font-size: 0.82em; margin: 0 0 10px;">MCP client makes requests to MCP server on behalf of a signed-in user:</p>
-					<svg viewBox="0 0 1100 620" role="img" aria-label="OAuth-protected MCP request and response flow" style="margin-top: -86px; width: 88%; max-width: 1100px; height: auto;">
-						<defs>
-							<linearGradient id="oauthFlowServerCard" x1="0%" y1="0%" x2="100%" y2="100%">
-								<stop offset="0%" stop-color="#ffffff"/>
-								<stop offset="100%" stop-color="#fff3e2"/>
-							</linearGradient>
-							<marker id="oauthFlowArrow" markerWidth="10" markerHeight="10" refX="7" refY="3.5" orient="auto" markerUnits="strokeWidth">
-								<path d="M0,0 L0,7 L7,3.5 z" fill="#173a63"/>
-							</marker>
-						</defs>
-
-						<rect x="46" y="92" width="246" height="438" rx="26" fill="#0086a3"/>
-						<image href="Model_Context_Protocol_logo.svg" x="139" y="202" width="58" height="58" opacity="0.92"/>
-						<text x="169" y="322" text-anchor="middle" font-family="Outfit, sans-serif" font-size="34" font-weight="700" fill="#ffffff">MCP Client</text>
-
-						<rect x="788" y="92" width="278" height="438" rx="26" fill="url(#oauthFlowServerCard)" stroke="#e1952a" stroke-width="2.5"/>
-						<image href="Model_Context_Protocol_logo.svg" x="898" y="202" width="58" height="58" opacity="0.92"/>
-						<text x="927" y="322" text-anchor="middle" font-family="Outfit, sans-serif" font-size="34" font-weight="700" fill="#e1952a">MCP Server</text>
-						<text x="927" y="370" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#1f1f1f">Verifies the access token</text>
-						<text x="927" y="396" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#1f1f1f">and returns results scoped</text>
-						<text x="927" y="422" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#1f1f1f">to that signed-in user.</text>
-
-						<line x1="292" y1="146" x2="788" y2="146" stroke="#173a63" stroke-width="5" marker-end="url(#oauthFlowArrow)"/>
-						<g transform="translate(540 146)">
-							<rect x="-34" y="-18" width="68" height="34" rx="17" fill="#ffffff" stroke="#147ad6" stroke-width="2"/>
-							<text x="0" y="7" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#147ad6">MCP</text>
-						</g>
-
-						<rect x="346" y="188" width="430" height="40" rx="12" fill="#f5f7fb" stroke="#dbe6f5" stroke-width="2"/>
-						<text x="364" y="215" font-family="SFMono-Regular, Consolas, monospace" font-size="16" fill="#111111">Authorization: Bearer &lt;access_token&gt;</text>
-
-						<rect x="346" y="238" width="430" height="206" rx="18" fill="#f5f7fb" stroke="#dbe6f5" stroke-width="2"/>
-						<text x="364" y="266" font-family="SFMono-Regular, Consolas, monospace" font-size="12" fill="#2b2b2b">{</text>
-						<text x="382" y="290" font-family="SFMono-Regular, Consolas, monospace" font-size="12" fill="#2b2b2b">"jsonrpc": "2.0",</text>
-						<text x="382" y="314" font-family="SFMono-Regular, Consolas, monospace" font-size="12" fill="#2b2b2b">"method": "tools/call",</text>
-						<text x="382" y="338" font-family="SFMono-Regular, Consolas, monospace" font-size="12" fill="#2b2b2b">"params": {</text>
-						<text x="404" y="362" font-family="SFMono-Regular, Consolas, monospace" font-size="12" fill="#2b2b2b">"name": "get_expenses",</text>
-						<text x="404" y="386" font-family="SFMono-Regular, Consolas, monospace" font-size="12" fill="#2b2b2b">"user_id": "abc123"</text>
-						<text x="382" y="410" font-family="SFMono-Regular, Consolas, monospace" font-size="12" fill="#2b2b2b">}</text>
-						<text x="364" y="434" font-family="SFMono-Regular, Consolas, monospace" font-size="12" fill="#2b2b2b">}</text>
-
-						<line x1="788" y1="500" x2="292" y2="500" stroke="#173a63" stroke-width="5" marker-end="url(#oauthFlowArrow)"/>
-						<g transform="translate(540 500)">
-							<rect x="-34" y="-18" width="68" height="34" rx="17" fill="#ffffff" stroke="#147ad6" stroke-width="2"/>
-							<text x="0" y="7" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#147ad6">MCP</text>
-						</g>
-
-						<rect x="346" y="534" width="430" height="72" rx="18" fill="#f5f7fb" stroke="#dbe6f5" stroke-width="2"/>
-						<text x="364" y="560" font-family="SFMono-Regular, Consolas, monospace" font-size="11.5" fill="#2b2b2b">{</text>
-						<text x="382" y="582" font-family="SFMono-Regular, Consolas, monospace" font-size="11.5" fill="#2b2b2b">"jsonrpc": "2.0", "result": {</text>
-						<text x="382" y="602" font-family="SFMono-Regular, Consolas, monospace" font-size="11.5" fill="#2b2b2b">"content": [{ "amount": 200 }, ...] } }</text>
-					</svg>
-					<aside class="notes">
-						This is the high-level access pattern for OAuth-protected MCP over HTTP. The client sends a normal MCP request, but includes a bearer token for the signed-in user. The server validates that token and returns user-scoped results. We'll use the next slides to explain how the client gets recognized and how the auth flow is wired up.
-					</aside>
-				</section>
-
-				<section>
-					<h3>OAuth 2.1 overview</h3>
-					<p class="lead" style="font-size: 0.78em; margin-bottom: 12px;">OAuth 2.1 is a standard for allowing resource owners to make authorized requests. MCP auth builds on top of OAuth 2.1.</p>
-					<svg viewBox="0 0 1120 430" role="img" aria-label="OAuth 2.1 terminology map for MCP auth" style="width: 100%; height: auto; display: block; margin-top: -2px;">
-						<defs>
-							<marker id="oauth-terms-client-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,7 L10,3.5 z" fill="#0086a3"/></marker>
-							<marker id="oauth-terms-token-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,7 L10,3.5 z" fill="#72a843"/></marker>
-						</defs>
-
-						<rect x="70" y="174" width="224" height="112" rx="10" fill="rgba(0, 134, 163, 0.12)" stroke="#0086a3" stroke-width="3"/>
-						<image href="Model_Context_Protocol_logo.svg" x="96" y="198" width="28" height="28"/>
-						<text x="186" y="216" text-anchor="middle" font-size="19" font-weight="700" fill="#32115f">OAuth client</text>
-						<text x="186" y="244" text-anchor="middle" font-size="18" font-weight="700" fill="#0086a3">MCP client</text>
-						<text x="186" y="270" text-anchor="middle" font-size="13" fill="#4e3f60">Requests access</text>
-
-						<rect x="454" y="44" width="268" height="82" rx="10" fill="rgba(114, 168, 67, 0.12)" stroke="#72a843" stroke-width="3"/>
-						<path d="M482 64 L498 70 L495 84 C493 92, 488 98, 482 101 C476 98, 471 92, 469 84 L466 70 Z" fill="rgba(114, 168, 67, 0.18)" stroke="#72a843" stroke-width="2"/>
-						<path d="M475 82 L480 87 L490 75" fill="none" stroke="#72a843" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-						<text x="612" y="85" text-anchor="middle" font-size="19" font-weight="700" fill="#32115f">Authorization server</text>
-						<text x="612" y="109" text-anchor="middle" font-size="13" fill="#4e3f60">Authenticates and issues tokens</text>
-
-						<rect x="826" y="174" width="224" height="112" rx="10" fill="rgba(225, 149, 42, 0.14)" stroke="#e1952a" stroke-width="3"/>
-						<image href="Model_Context_Protocol_logo.svg" x="846" y="198" width="24" height="24"/>
-						<text x="954" y="216" text-anchor="middle" font-size="18" font-weight="700" fill="#32115f">Resource server</text>
-						<text x="954" y="244" text-anchor="middle" font-size="18" font-weight="700" fill="#e1952a">MCP server</text>
-						<text x="954" y="270" text-anchor="middle" font-size="13" fill="#4e3f60">Hosts protected tools/data</text>
-
-						<rect x="454" y="304" width="268" height="94" rx="10" fill="rgba(156, 39, 166, 0.12)" stroke="#9c27a6" stroke-width="3"/>
-						<circle cx="488" cy="331" r="8" fill="#9c27a6"/>
-						<path d="M472 354 C 475 343, 501 343, 504 354" fill="#9c27a6"/>
-						<text x="596" y="336" text-anchor="middle" font-size="19" font-weight="700" fill="#32115f">Resource owner</text>
-						<text x="596" y="365" text-anchor="middle" font-size="18" font-weight="700" fill="#9c27a6">User</text>
-						<text x="596" y="389" text-anchor="middle" font-size="13" fill="#4e3f60">Owns the data and grants consent</text>
-
-						<line x1="294" y1="230" x2="676" y2="230" stroke="#20152f" stroke-width="3"/>
-						<line x1="772" y1="230" x2="826" y2="230" stroke="#72a843" stroke-width="3" marker-end="url(#oauth-terms-token-arrow)"/>
-						<line x1="588" y1="126" x2="588" y2="304" stroke="#20152f" stroke-width="3"/>
-						<text x="414" y="215" text-anchor="middle" font-size="14" fill="#0086a3">authorization request</text>
-						<line x1="294" y1="205" x2="454" y2="122" stroke="#0086a3" stroke-width="2.2" marker-end="url(#oauth-terms-client-arrow)"/>
-						<text x="728" y="204" text-anchor="middle" font-size="14" fill="#72a843">access token</text>
-						<path d="M684 214 H764 Q772 214 772 222 V238 Q772 246 764 246 H684 Q676 246 676 238 V222 Q676 214 684 214 Z" fill="#f4fff0" stroke="#72a843" stroke-width="2"/>
-						<circle cx="706" cy="230" r="5" fill="none" stroke="#32115f" stroke-width="2"/>
-						<line x1="711" y1="230" x2="744" y2="230" stroke="#32115f" stroke-width="2" stroke-linecap="round"/>
-						<line x1="736" y1="230" x2="736" y2="236" stroke="#32115f" stroke-width="2" stroke-linecap="round"/>
-						<line x1="744" y1="230" x2="744" y2="236" stroke="#32115f" stroke-width="2" stroke-linecap="round"/>
-					</svg>
-					<aside class="notes">
-						OAuth names the participants more generally. The MCP client is the OAuth client, the MCP server is the OAuth resource server, the user is the resource owner, and the authorization server authenticates the user and issues access tokens. The next slide shows those roles interacting in sequence.
-					</aside>
-				</section>
-
-				<section>
-					<h3>OAuth flow for MCP (Simplified)</h3>
-					<svg viewBox="0 0 1120 500" role="img" aria-label="Simplified OAuth sequence for MCP" style="width: 100%; height: auto; display: block; margin-top: -6px;">
-						<defs>
-							<marker id="oauth-user-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
-								<path d="M0,0 L0,7 L10,3.5 z" fill="#9c27a6"/>
-							</marker>
-							<marker id="oauth-client-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
-								<path d="M0,0 L0,7 L10,3.5 z" fill="#0086a3"/>
-							</marker>
-							<marker id="oauth-as-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
-								<path d="M0,0 L0,7 L10,3.5 z" fill="#72a843"/>
-							</marker>
-							<marker id="oauth-server-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
-								<path d="M0,0 L0,7 L10,3.5 z" fill="#e1952a"/>
-							</marker>
-						</defs>
-
-						<rect x="26" y="18" width="128" height="48" rx="8" fill="rgba(156, 39, 166, 0.12)" stroke="#9c27a6" stroke-width="3"/>
-						<circle cx="52" cy="36" r="8" fill="#9c27a6"/>
-						<path d="M36 57 C 39 46, 65 46, 68 57" fill="#9c27a6"/>
-						<text x="98" y="49" text-anchor="middle" font-size="18" font-weight="700" fill="#32115f">User</text>
-						<rect x="292" y="18" width="158" height="48" rx="8" fill="rgba(0, 134, 163, 0.12)" stroke="#0086a3" stroke-width="3"/>
-						<image href="Model_Context_Protocol_logo.svg" x="310" y="32" width="20" height="20"/>
-						<text x="390" y="49" text-anchor="middle" font-size="18" font-weight="700" fill="#32115f">MCP Client</text>
-						<rect x="604" y="18" width="250" height="48" rx="8" fill="rgba(114, 168, 67, 0.12)" stroke="#72a843" stroke-width="3"/>
-						<path d="M634 29 L647 34 L645 45 C643 52, 639 57, 634 60 C629 57, 625 52, 623 45 L621 34 Z" fill="rgba(114, 168, 67, 0.18)" stroke="#72a843" stroke-width="2"/>
-						<path d="M628 44 L632 48 L640 38" fill="none" stroke="#72a843" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-						<text x="748" y="49" text-anchor="middle" font-size="18" font-weight="700" fill="#32115f">Authorization Server</text>
-						<rect x="944" y="18" width="150" height="48" rx="8" fill="rgba(225, 149, 42, 0.14)" stroke="#e1952a" stroke-width="3"/>
-						<image href="Model_Context_Protocol_logo.svg" x="958" y="30" width="24" height="24"/>
-						<text x="1036" y="49" text-anchor="middle" font-size="16" font-weight="700" fill="#20152f">MCP Server</text>
-
-						<line x1="90" y1="66" x2="90" y2="486" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6 5"/>
-						<line x1="371" y1="66" x2="371" y2="486" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6 5"/>
-						<line x1="729" y1="66" x2="729" y2="486" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6 5"/>
-						<line x1="1019" y1="66" x2="1019" y2="486" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6 5"/>
-
-						<text x="232" y="92" text-anchor="middle" font-size="13" fill="#9c27a6">Initiates action requiring MCP server</text>
-						<line x1="90" y1="103" x2="371" y2="103" stroke="#9c27a6" stroke-width="2.2" marker-end="url(#oauth-user-arrow)"/>
-						<text x="550" y="128" text-anchor="middle" font-size="13" fill="#0086a3">Redirects to AS with authorization request</text>
-						<line x1="371" y1="139" x2="729" y2="139" stroke="#0086a3" stroke-width="2.2" marker-end="url(#oauth-client-arrow)"/>
-						<text x="410" y="166" text-anchor="middle" font-size="13" fill="#72a843">Presents authentication prompt</text>
-						<line x1="729" y1="177" x2="90" y2="177" stroke="#72a843" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#oauth-as-arrow)"/>
-						<text x="410" y="204" text-anchor="middle" font-size="13" fill="#9c27a6">Enters credentials</text>
-						<line x1="90" y1="215" x2="729" y2="215" stroke="#9c27a6" stroke-width="2.2" marker-end="url(#oauth-user-arrow)"/>
-
-						<rect x="598" y="232" width="262" height="42" rx="6" fill="rgba(114, 168, 67, 0.14)" stroke="#72a843" stroke-dasharray="6 4"/>
-						<text x="729" y="250" text-anchor="middle" font-size="13" font-weight="400" fill="#315f2d">Authenticates user and</text>
-						<text x="729" y="268" text-anchor="middle" font-size="13" font-weight="400" fill="#315f2d">validates client registration</text>
-
-						<text x="410" y="298" text-anchor="middle" font-size="13" fill="#72a843">Displays consent page for client</text>
-						<line x1="729" y1="309" x2="90" y2="309" stroke="#72a843" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#oauth-as-arrow)"/>
-						<text x="410" y="336" text-anchor="middle" font-size="13" fill="#9c27a6">Grants consent</text>
-						<line x1="90" y1="347" x2="729" y2="347" stroke="#9c27a6" stroke-width="2.2" marker-end="url(#oauth-user-arrow)"/>
-						<text x="550" y="374" text-anchor="middle" font-size="13" fill="#72a843">Issues authorization code</text>
-						<line x1="729" y1="385" x2="371" y2="385" stroke="#72a843" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#oauth-as-arrow)"/>
-						<text x="550" y="408" text-anchor="middle" font-size="13" fill="#0086a3">Exchanges code for access token</text>
-						<line x1="371" y1="419" x2="729" y2="419" stroke="#0086a3" stroke-width="2.2" marker-end="url(#oauth-client-arrow)"/>
-						<text x="550" y="436" text-anchor="middle" font-size="12" fill="#72a843">Returns access token</text>
-						<line x1="729" y1="446" x2="371" y2="446" stroke="#72a843" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#oauth-as-arrow)"/>
-						<text x="675" y="464" text-anchor="middle" font-size="12" fill="#0086a3">MCP request + access token</text>
-						<line x1="371" y1="474" x2="1019" y2="474" stroke="#0086a3" stroke-width="2.2" marker-end="url(#oauth-client-arrow)"/>
-						<text x="790" y="489" text-anchor="middle" font-size="12" fill="#e1952a">Authenticated result or error</text>
-						<line x1="1019" y1="497" x2="371" y2="497" stroke="#e1952a" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#oauth-server-arrow)"/>
-					</svg>
-					<aside class="notes">
-						This is the high-level OAuth flow after discovery is complete. The client redirects the user to the authorization server, the authorization server prompts for credentials, validates the client, asks for consent, issues an authorization code, and the client exchanges that code for an access token. The client then sends MCP requests with the access token and receives authenticated results or errors.
-					</aside>
-				</section>
-
-				<section>
-					<h3>How the authorization server validates the client</h3>
-					<svg viewBox="0 0 1120 390" role="img" aria-label="Decision tree for validating OAuth clients" style="width: 88%; height: auto; display: block; margin: 0 auto;">
-						<defs>
-							<marker id="client-validate-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
-								<path d="M0,0 L0,7 L10,3.5 z" fill="#20152f"/>
-							</marker>
-						</defs>
-						<rect x="128" y="16" width="864" height="58" rx="10" fill="rgba(255,255,255,0.78)" stroke="#20152f" stroke-width="2.4"/>
-						<path d="M292 29 L309 36 L306 50 C304 59, 299 65, 292 69 C285 65, 280 59, 278 50 L275 36 Z" fill="rgba(114, 168, 67, 0.14)" stroke="#72a843" stroke-width="2.4"/>
-						<path d="M283 49 L290 56 L302 41" fill="none" stroke="#72a843" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-						<text x="560" y="53" text-anchor="middle" font-size="21" fill="#32115f">Does <tspan font-weight="700" fill="#72a843">authorization server</tspan> know the <tspan font-weight="700" fill="#0086a3">MCP client</tspan>?</text>
-						<rect x="802" y="27" width="42" height="36" rx="7" fill="rgba(0, 134, 163, 0.08)" stroke="#0086a3" stroke-width="4"/>
-						<line x1="802" y1="39" x2="844" y2="39" stroke="#0086a3" stroke-width="3"/>
-						<circle cx="813" cy="33" r="2" fill="#0086a3"/>
-						<circle cx="822" cy="33" r="2" fill="#0086a3"/>
-
-						<line x1="560" y1="74" x2="222" y2="160" stroke="#20152f" stroke-width="2.4" marker-end="url(#client-validate-arrow)"/>
-						<rect x="84" y="160" width="276" height="72" rx="10" fill="rgba(255,255,255,0.84)" stroke="#20152f" stroke-width="2"/>
-						<text x="222" y="204" text-anchor="middle" font-size="23" font-weight="700" fill="#32115f">Pre-registration</text>
-						<g>
-							<rect x="350" y="102" width="72" height="28" rx="14" fill="rgba(255,255,255,0.9)"/>
-							<rect x="358" y="107" width="18" height="18" rx="2" fill="#19c531" stroke="#176f26" stroke-width="1.5"/>
-							<path d="M362 116 L367 121 L374 111" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-							<text x="397" y="123" text-anchor="middle" font-size="16" font-style="italic" fill="#20152f">Yes</text>
-						</g>
-
-						<line x1="560" y1="74" x2="735" y2="160" stroke="#20152f" stroke-width="2.4" marker-end="url(#client-validate-arrow)"/>
-						<rect x="420" y="160" width="620" height="64" rx="10" fill="rgba(255,255,255,0.84)" stroke="#20152f" stroke-width="2"/>
-						<text x="730" y="199" text-anchor="middle" font-size="20" fill="#32115f">Do <tspan font-weight="700" fill="#72a843">authorization server</tspan> <tspan font-style="italic">and</tspan> <tspan font-weight="700" fill="#0086a3">MCP client</tspan> <tspan font-weight="700">support CIMD?</tspan></text>
-						<g>
-							<rect x="614" y="102" width="64" height="28" rx="14" fill="rgba(255,255,255,0.9)"/>
-							<text x="630" y="122" text-anchor="middle" font-size="24" font-weight="700" fill="#e13b22">x</text>
-							<text x="658" y="121" text-anchor="middle" font-size="16" font-style="italic" fill="#20152f">No</text>
-						</g>
-
-						<line x1="730" y1="224" x2="560" y2="282" stroke="#20152f" stroke-width="2.4" marker-end="url(#client-validate-arrow)"/>
-						<rect x="390" y="282" width="340" height="82" rx="14" fill="rgba(255,255,255,0.84)" stroke="#20152f" stroke-width="2"/>
-						<text x="560" y="309" text-anchor="middle" font-size="22" font-weight="700" fill="#32115f">CIMD:</text>
-						<text x="560" y="335" text-anchor="middle" font-size="19" font-weight="700" fill="#32115f">Client Identity Metadata</text>
-						<text x="560" y="358" text-anchor="middle" font-size="19" font-weight="700" fill="#32115f">Document</text>
-						<g>
-							<rect x="620" y="236" width="72" height="28" rx="14" fill="rgba(255,255,255,0.9)"/>
-							<rect x="628" y="241" width="18" height="18" rx="2" fill="#19c531" stroke="#176f26" stroke-width="1.5"/>
-							<path d="M632 250 L637 255 L644 245" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-							<text x="667" y="257" text-anchor="middle" font-size="16" font-style="italic" fill="#20152f">Yes</text>
-						</g>
-
-						<line x1="730" y1="224" x2="930" y2="282" stroke="#20152f" stroke-width="2.4" marker-end="url(#client-validate-arrow)"/>
-						<rect x="778" y="282" width="304" height="82" rx="14" fill="rgba(255,255,255,0.84)" stroke="#20152f" stroke-width="2"/>
-						<text x="930" y="309" text-anchor="middle" font-size="22" font-weight="700" fill="#32115f">DCR:</text>
-						<text x="930" y="336" text-anchor="middle" font-size="19" font-weight="700" fill="#32115f">Dynamic Client</text>
-						<text x="930" y="359" text-anchor="middle" font-size="19" font-weight="700" fill="#32115f">Registration</text>
-						<g>
-							<rect x="836" y="236" width="64" height="28" rx="14" fill="rgba(255,255,255,0.9)"/>
-							<text x="852" y="256" text-anchor="middle" font-size="24" font-weight="700" fill="#e13b22">x</text>
-							<text x="880" y="255" text-anchor="middle" font-size="16" font-style="italic" fill="#20152f">No</text>
-						</g>
-					</svg>
-					<aside class="notes">
-						The authorization server has to validate the OAuth client before it can issue tokens. If the client is pre-registered, that is straightforward. If the client has a Client ID Metadata Document, the client ID is an HTTPS URL that the authorization server can fetch and validate. Dynamic Client Registration is the fallback where the client registers itself with the authorization server at runtime.
-					</aside>
-				</section>
-
-				<section>
-					<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 0;">
-						<h3 style="margin-bottom: 0;">DCR flow</h3>
-						<p class="lead" style="font-size: 0.62em; margin: 0; text-align: right; font-style: italic;">Only the initial client registration step differs.</p>
-					</div>
-					<svg viewBox="0 0 1120 500" role="img" aria-label="Dynamic Client Registration followed by OAuth flow" style="width: 92%; height: auto; display: block; margin: -8px auto 0;">
-						<defs>
-							<marker id="dcr-user-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
-								<path d="M0,0 L0,7 L10,3.5 z" fill="#9c27a6"/>
-							</marker>
-							<marker id="dcr-client-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
-								<path d="M0,0 L0,7 L10,3.5 z" fill="#0086a3"/>
-							</marker>
-							<marker id="dcr-as-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
-								<path d="M0,0 L0,7 L10,3.5 z" fill="#72a843"/>
-							</marker>
-						</defs>
-						<circle cx="56" cy="26" r="8" fill="#9c27a6"/>
-						<path d="M40 47 C 43 36, 69 36, 72 47" fill="#9c27a6"/>
-						<text x="56" y="72" text-anchor="middle" font-size="16" fill="#9c27a6">User</text>
-						<rect x="366" y="18" width="32" height="28" rx="5" fill="rgba(0, 134, 163, 0.08)" stroke="#0086a3" stroke-width="3"/>
-						<line x1="366" y1="28" x2="398" y2="28" stroke="#0086a3" stroke-width="2"/>
-						<text x="382" y="72" text-anchor="middle" font-size="16" fill="#0086a3">MCP client</text>
-						<path d="M972 19 L989 26 L986 40 C984 49, 979 55, 972 59 C965 55, 960 49, 958 40 L955 26 Z" fill="rgba(114, 168, 67, 0.14)" stroke="#72a843" stroke-width="2.4"/>
-						<path d="M963 39 L970 46 L982 31" fill="none" stroke="#72a843" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-						<text x="972" y="72" text-anchor="middle" font-size="16" fill="#72a843">Authorization server (AS)</text>
-
-						<rect x="48" y="82" width="16" height="408" rx="4" fill="rgba(156, 39, 166, 0.22)"/>
-						<rect x="374" y="82" width="16" height="408" rx="4" fill="rgba(0, 134, 163, 0.18)"/>
-						<rect x="964" y="82" width="16" height="408" rx="4" fill="rgba(114, 168, 67, 0.26)"/>
-						<text x="30" y="315" text-anchor="middle" font-size="13" fill="#20152f" transform="rotate(-90 30 315)">Standard OAuth flow, with new client ID</text>
-
-						<text x="640" y="108" text-anchor="middle" font-size="13" fill="#0086a3">Sends Dynamic Client Registration request to /register</text>
-						<line x1="390" y1="116" x2="964" y2="116" stroke="#0086a3" stroke-width="2.2" marker-end="url(#dcr-client-arrow)"/>
-						<text x="640" y="130" text-anchor="middle" font-size="12" fill="#0086a3">?redirect_uris=...&amp;grant_types=...&amp;client_name=...</text>
-						<rect x="844" y="140" width="248" height="24" rx="3" fill="rgba(114, 168, 67, 0.08)" stroke="#72a843" stroke-dasharray="4 3"/>
-						<text x="968" y="157" text-anchor="middle" font-size="12" fill="#72a843">Stores in client database</text>
-						<text x="780" y="184" text-anchor="middle" font-size="13" fill="#72a843">Returns client_id</text>
-						<line x1="964" y1="192" x2="390" y2="192" stroke="#72a843" stroke-width="2" marker-end="url(#dcr-as-arrow)"/>
-
-						<text x="188" y="221" text-anchor="middle" font-size="13" fill="#9c27a6">Initiates action requiring MCP server</text>
-						<line x1="64" y1="228" x2="374" y2="228" stroke="#9c27a6" stroke-width="2.2" marker-end="url(#dcr-user-arrow)"/>
-						<text x="640" y="251" text-anchor="middle" font-size="12" fill="#0086a3">Redirects to AS with authorization request ?client_id=NEW_CLIENT_ID</text>
-						<line x1="390" y1="258" x2="964" y2="258" stroke="#0086a3" stroke-width="2.2" marker-end="url(#dcr-client-arrow)"/>
-						<text x="780" y="281" text-anchor="middle" font-size="12" fill="#72a843">Presents authentication prompt</text>
-						<line x1="964" y1="288" x2="64" y2="288" stroke="#72a843" stroke-width="2" marker-end="url(#dcr-as-arrow)"/>
-						<text x="190" y="311" text-anchor="middle" font-size="12" fill="#9c27a6">Enters credentials</text>
-						<line x1="64" y1="318" x2="964" y2="318" stroke="#9c27a6" stroke-width="2.2" marker-end="url(#dcr-user-arrow)"/>
-						<rect x="856" y="326" width="244" height="34" rx="3" fill="rgba(114, 168, 67, 0.08)" stroke="#72a843" stroke-dasharray="4 3"/>
-						<text x="978" y="340" text-anchor="middle" font-size="11" fill="#72a843">Authenticates user and</text>
-						<text x="978" y="354" text-anchor="middle" font-size="11" fill="#72a843">validates client registration</text>
-						<text x="780" y="377" text-anchor="middle" font-size="12" fill="#72a843">Displays consent page for client</text>
-						<line x1="964" y1="384" x2="64" y2="384" stroke="#72a843" stroke-width="2" marker-end="url(#dcr-as-arrow)"/>
-						<text x="190" y="405" text-anchor="middle" font-size="12" fill="#9c27a6">Grants consent</text>
-						<line x1="64" y1="412" x2="964" y2="412" stroke="#9c27a6" stroke-width="2.2" marker-end="url(#dcr-user-arrow)"/>
-						<text x="780" y="433" text-anchor="middle" font-size="12" fill="#72a843">Issues authorization code</text>
-						<line x1="964" y1="440" x2="390" y2="440" stroke="#72a843" stroke-width="2" marker-end="url(#dcr-as-arrow)"/>
-						<text x="640" y="459" text-anchor="middle" font-size="12" fill="#0086a3">Exchanges code for access token</text>
-						<line x1="390" y1="466" x2="964" y2="466" stroke="#0086a3" stroke-width="2.2" marker-end="url(#dcr-client-arrow)"/>
-						<text x="780" y="485" text-anchor="middle" font-size="12" fill="#72a843">Returns access token</text>
-						<line x1="964" y1="492" x2="390" y2="492" stroke="#72a843" stroke-width="2" marker-end="url(#dcr-as-arrow)"/>
-					</svg>
-					<aside class="notes">
-						With Dynamic Client Registration, the MCP client first registers itself with the authorization server and receives a new client ID. After that initial registration, the rest of the OAuth flow is the same pattern: redirect with the new client ID, authenticate the user, validate the client registration, ask for consent, and issue tokens.
-					</aside>
-				</section>
-
-				<section>
-					<h3>Support for MCP Auth across auth providers</h3>
-					<table style="font-size: 0.78em; margin-top: 18px;">
-						<thead>
-							<tr>
-								<th>Provider</th>
-								<th>Description</th>
-								<th>CIMD</th>
-								<th>DCR</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr><td><strong>Okta Auth0</strong></td><td>Hosted identity provider</td><td>✅</td><td>✅</td></tr>
-							<tr><td><strong>Microsoft Entra</strong></td><td>Hosted identity provider</td><td>❌</td><td>❌</td></tr>
-							<tr><td><strong>ScaleKit</strong></td><td>Identity provider<br><span style="font-size: 0.82em;">(+ wrapper of hosted IdPs)</span></td><td>✅</td><td>✅</td></tr>
-							<tr><td><strong>Descope</strong></td><td>Identity provider<br><span style="font-size: 0.82em;">(+ wrapper of hosted IdPs)</span></td><td>✅</td><td>✅</td></tr>
-							<tr><td><strong>WorkOS AuthKit</strong></td><td>Identity provider<br><span style="font-size: 0.82em;">(+ wrapper of hosted IdPs)</span></td><td>✅</td><td>✅</td></tr>
-							<tr><td><strong>Keycloak</strong></td><td>OSS identity provider</td><td>❌</td><td>✅</td></tr>
-						</tbody>
-					</table>
-					<aside class="notes">
-						Provider support varies. Entra supports metadata discovery but not CIMD or DCR, so it needs a proxy approach for arbitrary MCP clients. Keycloak supports DCR but has a few implementation caveats. Newer identity platforms tend to have broader support for the pieces MCP clients need.
-					</aside>
-				</section>
-
-
-				<section>
-					<h3>Keycloak: open-source identity server</h3>
-					<div style="margin-top: 14px; display: grid; gap: 14px; justify-items: center;">
-						<img src="screenshot_keycloak.png" alt="Keycloak website screenshot" style="width: 92%; max-height: 400px; object-fit: contain; border: 1px solid #d8cff0; border-radius: 8px; box-shadow: 0 12px 30px rgba(50, 17, 95, 0.16);">
-						<div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; font-size: 0.56em; color: #32115f;">
-							<span style="background: rgba(255,255,255,0.78); border: 1px solid #d8cff0; border-radius: 999px; padding: 8px 14px;">Runs from a Docker image</span>
-							<span style="background: rgba(255,255,255,0.78); border: 1px solid #d8cff0; border-radius: 999px; padding: 8px 14px;">Admin portal</span>
-							<span style="background: rgba(255,255,255,0.78); border: 1px solid #d8cff0; border-radius: 999px; padding: 8px 14px;">Realms separate tenants</span>
-							<span style="background: rgba(255,255,255,0.78); border: 1px solid #d8cff0; border-radius: 999px; padding: 8px 14px;">Supports OAuth flows and DCR</span>
-						</div>
-					</div>
-					<aside class="notes">
-						Keycloak is useful for the tutorial because it gives us an open-source identity server that we can deploy and configure. It supports the OAuth flow and Dynamic Client Registration, although FastMCP uses provider code to smooth over some Keycloak DCR quirks.
-					</aside>
-				</section>
-
-				<section>
-					<h3>Implementing MCP auth in FastMCP</h3>
-					<div style="display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 26px; align-items: stretch; margin-top: 16px;">
-						<div>
-							<p style="font-size: 0.9em; "><strong>Two approaches: </strong></p>
-							<ul class="tight" style="font-size: 0.8em;">
-								<li><strong>RemoteAuthProvider</strong> for providers with DCR support.</li>
-								<li><strong>OAuthProxy</strong> for providers that need the MCP server to implement DCR.</li>
-							</ul>
-						</div>
-						<svg viewBox="0 0 680 350" role="img" aria-label="FastMCP OAuth provider class hierarchy" style="width: 100%; height: auto; display: block;">
-							<defs>
-								<marker id="provider-tree-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
-									<path d="M0,0 L0,7 L10,3.5 z" fill="#20152f"/>
-								</marker>
-							</defs>
-							<rect x="215" y="16" width="250" height="54" rx="8" fill="#edf4fc" stroke="#5f51bd" stroke-width="3"/>
-							<text x="340" y="50" text-anchor="middle" font-size="18" font-weight="700" fill="#32115f">OAuthProvider</text>
-							<rect x="40" y="128" width="260" height="72" rx="8" fill="#fffaf1" stroke="#ffd66b" stroke-width="3"/>
-							<text x="170" y="158" text-anchor="middle" font-size="17" font-weight="700" fill="#32115f">RemoteAuthProvider</text>
-							<text x="170" y="181" text-anchor="middle" font-size="14" fill="#4e3f60">Provider supports DCR</text>
-							<rect x="380" y="128" width="260" height="72" rx="8" fill="#fbf8ff" stroke="#ff32c8" stroke-width="3"/>
-							<text x="510" y="158" text-anchor="middle" font-size="17" font-weight="700" fill="#32115f">OAuthProxy</text>
-							<text x="510" y="181" text-anchor="middle" font-size="14" fill="#4e3f60">Server implements DCR</text>
-							<line x1="290" y1="70" x2="170" y2="128" stroke="#20152f" stroke-width="2.2" marker-end="url(#provider-tree-arrow)"/>
-							<line x1="390" y1="70" x2="510" y2="128" stroke="#20152f" stroke-width="2.2" marker-end="url(#provider-tree-arrow)"/>
-							<rect x="20" y="246" width="300" height="70" rx="8" fill="rgba(255,255,255,0.78)" stroke="#d8cff0"/>
-							<text x="170" y="276" text-anchor="middle" font-size="15" fill="#20152f">Descope, Supabase, ScaleKit,</text>
-							<text x="170" y="298" text-anchor="middle" font-size="15" fill="#20152f">AuthKit, Keycloak</text>
-							<rect x="360" y="246" width="300" height="70" rx="8" fill="rgba(255,255,255,0.78)" stroke="#d8cff0"/>
-							<text x="510" y="276" text-anchor="middle" font-size="15" fill="#20152f">Azure, Auth0, GitHub, Google,</text>
-							<text x="510" y="298" text-anchor="middle" font-size="15" fill="#20152f">Cognito, Discord, WorkOS</text>
-							<line x1="170" y1="200" x2="170" y2="246" stroke="#20152f" stroke-width="2.2" marker-end="url(#provider-tree-arrow)"/>
-							<line x1="510" y1="200" x2="510" y2="246" stroke="#20152f" stroke-width="2.2" marker-end="url(#provider-tree-arrow)"/>
-						</svg>
-					</div>
-					<aside class="notes">
-						FastMCP has an OAuthProvider base class. RemoteAuthProvider is for identity providers that can support the OAuth pieces directly, especially Dynamic Client Registration. OAuthProxy is for providers like Entra that do not support DCR, so the MCP server provides the missing registration layer and forwards auth to the identity provider.
-					</aside>
-				</section>
-
-
-
-				<section class="no-code-badge">
-					<h3>Integrating Keycloak with FastMCP</h3>
-					<pre><code class="language-python" data-trim data-noescape>
-from fastmcp.server.auth.providers.keycloak import KeycloakAuthProvider
-
-auth = KeycloakAuthProvider(
-    realm_url="https://example.com/realms/pycon",
-    base_url="http://localhost:8420",
-    required_scopes=["openid", "mcp:access"],
-    audience="product-store",
-)
-
-mcp = FastMCP("Pamela's Bakery", auth=auth)
-					</code></pre>
-					<aside class="notes">
-						FastMCP handles the protected resource metadata route, OAuth discovery, token validation, and the connection between the MCP server and the Keycloak realm. The important configuration values are the realm URL, the public base URL for this MCP server, the scopes the client must request, and the expected audience.
-					</aside>
-				</section>
-
-				<section>
-					<div style="position: absolute; top: 38px; right: 58px; font-size: 0.72em; font-weight: 700; color: var(--deck-heading); padding: 8px 14px; border: 2px solid rgba(255, 50, 200, 0.45); border-radius: 8px; background: rgba(255, 255, 255, 0.72);">⏳ 35 min</div>
-					<h3>Exercise time</h3>
-					<p><strong>Exercise 5:</strong><br>
-						Add Keycloak authentication to your MCP server<br>
-						<a href="https://tinyurl.com/pyconmcp-ex5" target="_blank"><code>tinyurl.com/pyconmcp-ex5</code></a>
-					</p>
-
-					<p style="margin-top: 100px;">🙋🏽‍♀️ 🙋🏻‍♂️ 🙋🏿 🙋🏼‍♀️ 🙋🏾‍♂️ Got a question? Raise your hand, we'll come around!</p>
-					<aside class="notes">
-						Give attendees time to work through exercise5.md. Have the instructor-provided Keycloak realm URL, audience, and test credentials ready.
 					</aside>
 				</section>
 
@@ -2089,7 +1461,7 @@ mcp = FastMCP("Pamela's Bakery", auth=auth)
 
 				<section>
 					<h3>Thank you!</h3>
-					<p>Repository:<br><a target="_blank" href="https://github.com/pamelafox/pycon2026-mcp-tutorial">github.com/pamelafox/pycon2026-mcp-tutorial</a></p>
+					<p>Repository:<br><a target="_blank" href="https://github.com/pamelafox/github-copilot-mcp-tutorial">github.com/pamelafox/github-copilot-mcp-tutorial</a></p>
 					<p>Check out more of my MCP talks:</p>
 					<ul>
 						<li><a target="_blank" href="https://www.youtube.com/watch?v=l0McGgmngeU">Improving MCP tool schemas to increase agent reliability</a></li>
@@ -2104,7 +1476,7 @@ mcp = FastMCP("Pamela's Bakery", auth=auth)
 					<div style="display: grid; grid-template-columns: minmax(0, 0.95fr) 320px; gap: 44px; align-items: center; margin-top: 34px;">
 						<div>
 							<p style="font-size: 1em; line-height: 1.28; margin-top: 0;"><strong>Please take the tutorial survey.</strong></p>
-							<p>Your feedback helps improve future PyCon tutorials and tells us what to build next.</p>
+							<p>Your feedback helps improve future GitHub Copilot Day workshops and tells us what to build next.</p>
 						</div>
 					</div>
 					<aside class="notes">
