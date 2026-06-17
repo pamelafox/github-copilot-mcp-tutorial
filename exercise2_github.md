@@ -37,6 +37,8 @@ Follow the instructions for your agent: [GitHub Copilot in VS Code](#github-copi
 
 4. Click the tools icon (🔧) in the Copilot Chat panel and confirm the GitHub tools are listed. You should see tools like `list_issues`, `create_pull_request`, `get_file_contents`, and many more.
 
+5. Move on to [step 2](#step-2-explore-the-issues).
+
 ### GitHub Copilot CLI
 
 1. Add the GitHub MCP server using the CLI:
@@ -46,6 +48,7 @@ Follow the instructions for your agent: [GitHub Copilot in VS Code](#github-copi
    ```
 
 2. Open Copilot CLI with `copilot`. It should prompt you to authenticate with GitHub if needed.
+3. Move on to [step 2](#step-2-explore-the-issues).
 
 ### GitHub Copilot app
 
@@ -61,6 +64,7 @@ Follow the instructions for your agent: [GitHub Copilot in VS Code](#github-copi
 
 5. If prompted, allow authentication to GitHub.
 6. Ask Copilot what GitHub MCP tools are available to confirm the server is connected.
+7. Move on to [step 2](#step-2-explore-the-issues).
 
 ---
 
@@ -109,12 +113,6 @@ Now ask Copilot to implement the fix, create a branch, and open a pull request �
    > ⚠️ **Warning:** Always verify the actions Copilot is asking to perform, especially with write operations from an MCP server. Review the tool calls before clicking **Continue**.
 
 2. Once the pull request is created, open it in GitHub and review the changes.
-
-3. *(Optional)* Ask Copilot to comment on the issue:
-
-   ```text
-   Add a comment to the issue saying it's been fixed in the PR.
-   ```
 
 ### GitHub Copilot app
 
