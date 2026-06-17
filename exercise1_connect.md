@@ -57,7 +57,8 @@ If you prefer to work without Docker or Codespaces, you can set up a local Pytho
 
 **Prerequisites:**
 
-- [uv](https://docs.astral.sh/uv/getting-started/installation/): Python package manager that can also download Python if you don't yet have it instaalled.
+- Python 3.12 or later
+- [uv](https://docs.astral.sh/uv/getting-started/installation/): Python package manager that can also download Python if you don't yet have it installed.
 
 **Steps:**
 
@@ -99,8 +100,6 @@ Set up **one** of the GitHub Copilot options below: [GitHub Copilot in VS Code /
 
 ### Option B: GitHub Copilot CLI
 
-> You need a [GitHub Copilot subscription](https://github.com/features/copilot) for this option.
-
 1. Install GitHub Copilot CLI by following the [installation guide](https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli).
 2. Verify the installation:
 
@@ -109,6 +108,14 @@ Set up **one** of the GitHub Copilot options below: [GitHub Copilot in VS Code /
    ```
 
 3. Move on to [Step 3](#step-3-use-a-public-mcp-server)
+
+### Option C: GitHub Copilot app
+
+1. Install GitHub Copilot app by following the [installation guide](https://github.com/github/app#install).
+2. Open the GitHub Copilot app.
+3. From the "Sessions" tab in the sidebar, select "+" and "Add project from GitHub repository"
+4. Enter the URL of this repository: "https://github.com/pamelafox/github-copilot-mcp-tutorial"
+5. Send a test message "Hello" to confirm the app is working.
 
 ---
 
@@ -124,7 +131,7 @@ Now connect GitHub Copilot to a **public MCP server** that requires no authentic
 
 Follow the instructions for your agent: [GitHub Copilot in VS Code](#github-copilot-in-vs-code--public-server) or [GitHub Copilot CLI](#github-copilot-cli--public-server).
 
-### GitHub Copilot in VS Code — public server
+### GitHub Copilot in VS Code
 
 1. Open (or create) the file `.vscode/mcp.json` in your workspace and make sure it contains a server configuration pointed at the Microsoft Learn MCP server URL:
 
@@ -156,7 +163,7 @@ Follow the instructions for your agent: [GitHub Copilot in VS Code](#github-copi
    What kind of GPUs are available for Azure Container Apps?
    ```
 
-### GitHub Copilot CLI — public server
+### GitHub Copilot CLI
 
 1. Add the MCP server using the CLI:
 
@@ -164,8 +171,29 @@ Follow the instructions for your agent: [GitHub Copilot in VS Code](#github-copi
    copilot mcp add --transport http mslearn https://learn.microsoft.com/api/mcp
    ```
 
-2. Ask a question that can be answered by the MCP server:
+2. Ask a question that can be answered by the Microsoft Learn MCP server:
 
    ```bash
    copilot -i "What kind of GPUs are available for Azure Container Apps?"
+   ```
+
+### GitHub Copilot app
+
+1. Open the GitHub Copilot app
+
+2. Select the "Settings" (gear) icon in the bottom left.
+
+3. Select "MCP servers" from settings menu.
+
+4. Select "+ Add server" and "Add custom server".
+
+   * For server name, enter "mslearn"
+   * Select "HTTP" next to server name. 
+   * For URL, enter "https://learn.microsoft.com/api/mcp"
+   * Select "Add server"
+
+5. Ask a question that requires context from Microsoft Learn MCP server:
+
+   ```text
+   What kind of GPUs are available for Azure Container Apps?
    ```
