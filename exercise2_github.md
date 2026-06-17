@@ -12,6 +12,8 @@ In this exercise, you'll connect to the GitHub MCP server, use it to find issues
 
 The [GitHub MCP server](https://github.com/github/github-mcp-server) gives your agent access to GitHub repositories, issues, pull requests, and more. Unlike the MS Learn server from Exercise 1, this one requires authentication.
 
+Follow the instructions for your agent: [GitHub Copilot in VS Code](#github-copilot-in-vs-code), [GitHub Copilot CLI](#github-copilot-cli), or [GitHub Copilot app](#github-copilot-app).
+
 ### GitHub Copilot in VS Code
 
 1. Add the GitHub MCP server to your `.vscode/mcp.json`:
@@ -45,6 +47,21 @@ The [GitHub MCP server](https://github.com/github/github-mcp-server) gives your 
 
 2. Open Copilot CLI with `copilot`. It should prompt you to authenticate with GitHub if needed.
 
+### GitHub Copilot app
+
+1. Open the GitHub Copilot app.
+2. Select the "Settings" (gear) icon in the bottom left.
+3. Select "MCP servers" from settings menu.
+4. Select "+ Add server" and "Add custom server".
+
+   * For server name, enter "github"
+   * Select "HTTP" next to server name.
+   * For URL, enter "https://api.githubcopilot.com/mcp/"
+   * Select "Add server"
+
+5. If prompted, allow authentication to GitHub.
+6. Ask Copilot what GitHub MCP tools are available to confirm the server is connected.
+
 ---
 
 ## Step 2: Explore the issues
@@ -77,6 +94,8 @@ This repository has a small quiz script in `src/quiz.py` with some known bugs an
 
 Now ask Copilot to implement the fix, create a branch, and open a pull request â€” all in one flow.
 
+### GitHub Copilot in VS Code / GitHub Copilot CLI
+
 1. Ask Copilot to implement the issue:
 
    ```text
@@ -92,6 +111,26 @@ Now ask Copilot to implement the fix, create a branch, and open a pull request â
 2. Once the pull request is created, open it in GitHub and review the changes.
 
 3. *(Optional)* Ask Copilot to comment on the issue:
+
+   ```text
+   Add a comment to the issue saying it's been fixed in the PR.
+   ```
+
+### GitHub Copilot app
+
+1. In a new chat in the GitHub Copilot app, ask Copilot to implement the issue:
+
+   ```text
+   Let's fix that issue. Follow these steps:
+   1. Checkout a new local branch for the fix.
+   2. Make the changes to src/quiz.py.
+   3. Commit and push the branch.
+   4. Create a pull request that references the issue.
+   ```
+
+2. Review and approve the tool calls before continuing.
+3. Once the pull request is created, open it in GitHub and review the changes.
+4. *(Optional)* Ask Copilot to comment on the issue:
 
    ```text
    Add a comment to the issue saying it's been fixed in the PR.
