@@ -70,7 +70,7 @@ def run_quiz():
             print(f"  {letter}) {text}")
         print()
 
-        user_answer = input("Your answer: ")
+        user_answer = input("Your answer: ").strip().upper()
 
         if user_answer == q["answer"]:
             print("✅ Correct!\n")
