@@ -13,17 +13,17 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Chewy&display=swap">
 		<style>
 		:root {
-			--deck-ink: #20152f;
-			--deck-heading: #32115f;
-			--deck-page: #fff7fd;
-			--deck-panel: rgba(255, 255, 255, 0.78);
-			--deck-panel-strong: rgba(255, 255, 255, 0.88);
-			--deck-border: rgba(88, 44, 130, 0.22);
-			--deck-muted: #6b4d78;
-			--deck-accent: #21e8f3;
-			--deck-pink: #ff32c8;
-			--deck-gold: #ffd66b;
-			--deck-shadow: rgba(255, 50, 200, 0.35);
+			--deck-ink: #0e1e35;
+			--deck-heading: #0b3a7c;
+			--deck-page: #eaf5fb;
+			--deck-panel: rgba(255, 255, 255, 0.80);
+			--deck-panel-strong: rgba(255, 255, 255, 0.92);
+			--deck-border: rgba(26, 107, 222, 0.20);
+			--deck-muted: #3a6080;
+			--deck-accent: #3ecf70;
+			--deck-pink: #1a6bde;
+			--deck-gold: #3ecf70;
+			--deck-shadow: rgba(26, 107, 222, 0.35);
 		}
 
 		html,
@@ -33,11 +33,11 @@
 
 		.reveal {
 			background:
-				radial-gradient(circle at 15% 14%, rgba(123, 44, 191, 0.18) 0 2px, transparent 3px),
-				radial-gradient(circle at 82% 17%, rgba(0, 132, 180, 0.16) 0 2px, transparent 3px),
-				radial-gradient(circle at 92% 44%, rgba(255, 50, 200, 0.14) 0 2px, transparent 3px),
-				radial-gradient(circle at 24% 34%, rgba(255, 174, 66, 0.18) 0 2px, transparent 3px),
-				linear-gradient(180deg, #fff7fd 0%, #f6f0ff 42%, #ffeef8 100%);
+				radial-gradient(circle at 15% 14%, rgba(26, 107, 222, 0.12) 0 2px, transparent 3px),
+				radial-gradient(circle at 82% 17%, rgba(62, 207, 112, 0.12) 0 2px, transparent 3px),
+				radial-gradient(circle at 92% 44%, rgba(26, 107, 222, 0.08) 0 2px, transparent 3px),
+				radial-gradient(circle at 24% 34%, rgba(62, 207, 112, 0.10) 0 2px, transparent 3px),
+				linear-gradient(180deg, #eaf5fb 0%, #f0f9fe 42%, #f8feff 100%);
 			font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 			color: var(--deck-ink);
 			position: relative;
@@ -64,12 +64,9 @@
 		}
 
 		.reveal.title-slide-active {
-			background:
-				radial-gradient(circle at 15% 14%, rgba(255, 255, 255, 0.85) 0 2px, transparent 3px),
-				radial-gradient(circle at 82% 17%, rgba(255, 255, 255, 0.75) 0 2px, transparent 3px),
-				radial-gradient(circle at 92% 44%, rgba(255, 255, 255, 0.65) 0 2px, transparent 3px),
-				radial-gradient(circle at 24% 34%, rgba(255, 214, 107, 0.75) 0 2px, transparent 3px),
-				linear-gradient(180deg, #2b0eb0 0%, #4817c4 34%, #b113ce 68%, #ff42c5 100%);
+			background-image: url('copilotdaybg.webp');
+			background-size: cover;
+			background-position: center;
 		}
 
 		.reveal .slides section {
@@ -95,7 +92,7 @@
 			letter-spacing: normal;
 			font-weight: 400;
 			-webkit-text-stroke: 0;
-			text-shadow: 0 0 10px rgba(255, 50, 200, 0.22);
+			text-shadow: 0 0 10px rgba(26, 107, 222, 0.22);
 		}
 
 		.reveal h1 { font-size: 1.82em; }
@@ -108,7 +105,7 @@
 			width: 118px;
 			height: 16px;
 			margin-top: 8px;
-			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 16' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='rainbow' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%2321e8f3'/%3E%3Cstop offset='0.55' stop-color='%23ff32c8'/%3E%3Cstop offset='1' stop-color='%23ffd66b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M2 8 C 10 1, 18 1, 26 8 S 42 15, 50 8 S 66 1, 74 8 S 90 15, 98 8 S 112 1, 118 8' fill='none' stroke='url(%23rainbow)' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 16' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='rainbow' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%231a6bde'/%3E%3Cstop offset='0.55' stop-color='%233ecf70'/%3E%3Cstop offset='1' stop-color='%2300b4d8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M2 8 C 10 1, 18 1, 26 8 S 42 15, 50 8 S 66 1, 74 8 S 90 15, 98 8 S 112 1, 118 8' fill='none' stroke='url(%23rainbow)' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
 			filter: drop-shadow(0 0 8px var(--deck-shadow));
 		}
 
@@ -138,8 +135,8 @@
 		.reveal code {
 			padding: 0.08em 0.26em;
 			border-radius: 0.3em;
-			background: rgba(50, 17, 95, 0.08);
-			color: #32115f;
+			background: rgba(11, 58, 124, 0.08);
+			color: #0b3a7c;
 		}
 
 		.reveal pre code {
@@ -174,7 +171,7 @@
 
 		.reveal th {
 			font-weight: 700;
-			background: rgba(255, 50, 200, 0.12);
+			background: rgba(62, 207, 112, 0.15);
 		}
 
 		.reveal tbody tr:nth-child(even) {
@@ -227,13 +224,13 @@
 		}
 
 		.reveal .box {
-			border: 1px solid rgba(33, 232, 243, 0.48);
+			border: 1px solid rgba(62, 207, 112, 0.48);
 			border-radius: 8px;
 			padding: 18px 20px;
 			min-height: 180px;
 			box-sizing: border-box;
 			background: var(--deck-panel);
-			box-shadow: 0 0 22px rgba(33, 232, 243, 0.16);
+			box-shadow: 0 0 22px rgba(62, 207, 112, 0.16);
 		}
 
 		.reveal .box h4 {
@@ -260,8 +257,8 @@
 			inset: 22px 34px 94px;
 			border-radius: 14px;
 			background: var(--deck-panel-strong);
-			border: 1px solid rgba(88, 44, 130, 0.22);
-			box-shadow: 0 22px 60px rgba(88, 44, 130, 0.16), inset 0 0 42px rgba(255, 50, 200, 0.06);
+			border: 1px solid rgba(26, 107, 222, 0.20);
+			box-shadow: 0 22px 60px rgba(26, 107, 222, 0.14), inset 0 0 42px rgba(26, 107, 222, 0.06);
 			z-index: 0;
 		}
 
@@ -278,13 +275,19 @@
 			background: transparent;
 		}
 
+		.reveal section.heading-only.title-slide {
+			align-items: flex-start;
+			text-align: left;
+			padding: 60px 52% 112px 72px;
+		}
+
 		.reveal section.heading-only h1,
 		.reveal section.heading-only h2,
 		.reveal section.heading-only h3,
 		.reveal section.heading-only p,
 		.reveal section.heading-only li {
 			color: var(--deck-heading);
-			text-shadow: 0 0 12px rgba(255, 50, 200, 0.18);
+			text-shadow: 0 0 12px rgba(26, 107, 222, 0.18);
 		}
 
 		.reveal section.heading-only h1::after,
@@ -295,8 +298,13 @@
 			width: 118px;
 			height: 16px;
 			margin: 18px auto 0;
-			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 16' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='rainbow' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%2321e8f3'/%3E%3Cstop offset='0.55' stop-color='%23ff32c8'/%3E%3Cstop offset='1' stop-color='%23ffd66b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M2 8 C 10 1, 18 1, 26 8 S 42 15, 50 8 S 66 1, 74 8 S 90 15, 98 8 S 112 1, 118 8' fill='none' stroke='url(%23rainbow)' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
-			filter: drop-shadow(0 0 8px rgba(255, 50, 200, 0.55));
+			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 16' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='rainbow' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%231a6bde'/%3E%3Cstop offset='0.55' stop-color='%233ecf70'/%3E%3Cstop offset='1' stop-color='%2300b4d8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M2 8 C 10 1, 18 1, 26 8 S 42 15, 50 8 S 66 1, 74 8 S 90 15, 98 8 S 112 1, 118 8' fill='none' stroke='url(%23rainbow)' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+			filter: drop-shadow(0 0 8px rgba(26, 107, 222, 0.55));
+		}
+
+		.reveal section.title-slide h1::after,
+		.reveal section.title-slide h2::after {
+			margin: 18px 0 0;
 		}
 
 		.reveal section.heading-only h3::after {
@@ -307,14 +315,14 @@
 		.reveal section.title-slide h2,
 		.reveal section.title-slide h3,
 		.reveal section.title-slide p {
-			color: #fff;
-			text-shadow: 0 0 18px rgba(255, 50, 200, 0.62), 0 4px 0 rgba(0, 0, 0, 0.38);
+			color: #0b3a7c;
+			text-shadow: 0 2px 8px rgba(255, 255, 255, 0.85);
 		}
 
 		.reveal section.title-slide a,
 		.reveal section.title-slide a:hover,
 		.reveal section.title-slide a:visited {
-			color: #fff;
+			color: #0b3a7c;
 			text-shadow: none;
 		}
 
@@ -338,7 +346,7 @@
 		}
 
 		.reveal .client-panel {
-			border: 1px solid rgba(33, 232, 243, 0.48);
+			border: 1px solid rgba(62, 207, 112, 0.48);
 			border-radius: 8px;
 			background: rgba(255, 255, 255, 0.58);
 			padding: 12px 14px;
@@ -431,13 +439,12 @@
 				<section>
 					<h3>About you</h3>
 
-                    <p>Turn to your neighbor and introduce yourself:</p>
+                    <p>Drop a message in the Teams chat with:</p>
 					<ul class="tight">
-						<li>Name</li>
-                        <li>Location</li>
+						<li>Name &amp; location</li>
                         <li>Have you used GitHub Copilot before?</li>
                         <li>What are you hoping to learn at GitHub Copilot Day?</li>
-                        <li>Make up a new meaning for "<strong>MCP</strong>" (e.g. "<strong>M</strong>ore <strong>C</strong>offee <strong>P</strong>lease") and write it on a sticky note.</li>
+                        <li>Make up a new meaning for "<strong>MCP</strong>" (e.g. "<strong>M</strong>ore <strong>C</strong>offee <strong>P</strong>lease")</li>
 					</ul>
 				</section>
 
@@ -450,12 +457,11 @@
 						<tbody>
 							<tr><td>Welcome</td><td>8 min</td></tr>
 							<tr><td>MCP 101</td><td>12 min</td></tr>
-							<tr><td>Exercise: Connect to MCP servers</td><td>12 min</td></tr>
+							<tr><td>Exercise: Connect to MCP servers</td><td>20 min</td></tr>
 							<tr><td>Exercise: Use the GitHub MCP server</td><td>15 min</td></tr>
 							<tr><td>Building an MCP server</td><td>10 min</td></tr>
-							<tr><td>Exercise: Build your own server</td><td>32 min</td></tr>
-							<tr><td>Advanced server features</td><td>8 min</td></tr>
-							<tr><td>Exercise: Add visual UI and confirmation</td><td>13 min</td></tr>
+							<tr><td>Exercise: Build your own server</td><td>15 min</td></tr>
+							<tr><td>Advanced server features</td><td>20 min</td></tr>
 							<tr><td>Next steps</td><td>5 min</td></tr>
 						</tbody>
 					</table>
@@ -850,7 +856,7 @@
                         </p>
 					</div>
 					<br>
-                    <p>🙋🏽‍♀️ 🙋🏻‍♂️ 🙋🏿 🙋🏼‍♀️ 🙋🏾‍♂️ Got a question? Raise your hand, we'll come around!</p>
+                    <p>🙋🏽‍♀️ 🙋🏻‍♂️ 🙋🏿 🙋🏼‍♀️ 🙋🏾‍♂️ Got a question? Post it in the chat!</p>
 					<aside class="notes">
 						Give attendees time to work through exercise1.md and exercise2.md.
 					</aside>
@@ -1059,22 +1065,365 @@ def analyze_spending_prompt(
 				</section>
 
 				<section>
-					<div style="position: absolute; top: 38px; right: 58px; font-size: 0.72em; font-weight: 700; color: var(--deck-heading); padding: 8px 14px; border: 2px solid rgba(255, 50, 200, 0.45); border-radius: 8px; background: rgba(255, 255, 255, 0.72);">⏳ 32 min</div>
+					<div style="position: absolute; top: 38px; right: 58px; font-size: 0.72em; font-weight: 700; color: var(--deck-heading); padding: 8px 14px; border: 2px solid rgba(255, 50, 200, 0.45); border-radius: 8px; background: rgba(255, 255, 255, 0.72);">⏳ 15 min</div>
 					<h3>Exercise time</h3>
 					<p><strong>Exercise 3:</strong><br>
 						Build your own product-store MCP server<br>
 						<a href="https://github.com/pamelafox/github-copilot-mcp-tutorial/blob/main/exercise3.md" target="_blank"><code>github.com/.../exercise3.md</code></a>
 					</p>
 
-					<p style="margin-top: 100px;">🙋🏽‍♀️ 🙋🏻‍♂️ 🙋🏿 🙋🏼‍♀️ 🙋🏾‍♂️ Got a question? Raise your hand, we'll come around!</p>
+					<p style="margin-top: 100px;">🙋🏽‍♀️ 🙋🏻‍♂️ 🙋🏿 🙋🏼‍♀️ 🙋🏾‍♂️ Got a question? Post it in the chat!</p>
 					<aside class="notes">
 						Give attendees time to work through exercise3.md. Remind them to test with direct server logs, MCP Inspector or MCPJam, and then their coding agent.
 					</aside>
 				</section>
 
 
+
 				<section>
 					<h3>MCP as a collaboration protocol</h3>
+					<p class="lead" style="margin-bottom: 30px;">New MCP features turn agents from executors into collaborators.</p>
+					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;">
+						<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 26px 24px; min-height: 210px;">
+							<div style="width: 68px; height: 68px; padding: 10px; box-sizing: border-box; border-radius: 16px; background: linear-gradient(135deg, #21e8f3, #5f51bd); display: flex; align-items: center; justify-content: center; font-size: 1.35em; margin-bottom: 24px;">💬</div>
+							<p style="font-size: 0.76em; line-height: 1.35; margin: 0; color: #4e3f60;"><strong>Elicitations</strong><br>Servers request structured input from the user mid-flow, so agents can ask instead of guess.</p>
+						</div>
+						<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 26px 24px; min-height: 210px;">
+							<div style="width: 68px; height: 68px; padding: 10px; box-sizing: border-box; border-radius: 16px; background: linear-gradient(135deg, #6ef0ce, #21e8f3); display: flex; align-items: center; justify-content: center; font-size: 1.35em; margin-bottom: 24px;">🖥️</div>
+							<p style="font-size: 0.76em; line-height: 1.35; margin: 0; color: #4e3f60;"><strong>MCP Apps</strong><br>Render interactive UI inside the client, so users can inspect and manipulate results.</p>
+						</div>
+						<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 26px 24px; min-height: 210px;">
+							<div style="width: 68px; height: 68px; padding: 10px; box-sizing: border-box; border-radius: 16px; background: linear-gradient(135deg, #ffd66b, #ff32c8); display: flex; align-items: center; justify-content: center; font-size: 1.35em; margin-bottom: 24px;">⏳</div>
+							<p style="font-size: 0.76em; line-height: 1.35; margin: 0; color: #4e3f60;"><strong>Tasks</strong><br>Run long work without blocking, with progress updates and partial failure handling.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>Elicitations</h3>
+					<p class="lead" style="font-size: 0.82em; margin-bottom: 16px;">Elicitations let servers request user input through the client.</p>
+					<div style="display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 24px; align-items: start;">
+						<div style="display: flex; flex-direction: column; gap: 16px;">
+							<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 16px 20px; min-height: 205px;">
+								<p style="font-size: 0.76em; margin: 0 0 8px;"><strong>Form mode</strong></p>
+								<p style="font-size: 0.7em; line-height: 1.25; margin: 0 0 10px;">Structured data collection in the client, optionally schema-validated.</p>
+								<p class="tight" style="font-size: 0.6em; line-height: 1.25; margin: 0;">
+									<strong>Example uses:</strong> Clarification of parameters, confirmation (especially before write ops)
+								</p>
+							</div>
+							<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 16px 20px; min-height: 160px;">
+								<p style="font-size: 0.76em; margin: 0 0 8px;"><strong>URL mode</strong></p>
+								<p style="font-size: 0.68em; line-height: 1.25; margin: 0 0 10px;">Out-of-band flow for sensitive info that must not pass through the MCP client.</p>
+								<p style="font-size: 0.6em; line-height: 1.25; margin: 0;">
+									<strong>Example uses:</strong> API keys, OAuth, payment
+								</p>
+							</div>
+						</div>
+						<div style="display: flex; flex-direction: column; gap: 16px;">
+							<div style="background: #fff; border: 1px solid #d8cff0; border-radius: 8px; box-shadow: 0 8px 20px rgba(50, 17, 95, 0.08); overflow: hidden;">
+								<div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: rgba(95, 81, 189, 0.12); border-bottom: 1px solid #d8cff0;">
+									<code style="font-size: 0.44em; color: #32115f;">purchase-product</code>
+									<span style="font-size: 0.4em; font-weight: 700; letter-spacing: 0.04em; color: #0078d4; background: #eefbff; border: 1px solid rgba(33, 232, 243, 0.5); border-radius: 999px; padding: 4px 8px;">FORM ELICITATION</span>
+								</div>
+								<div style="padding: 14px 18px;">
+									<p style="font-size: 0.5em; margin: 0 0 10px; color: #20152f;">Buy 2x Raspberry Pi Pico for $13.98?</p>
+									<label style="display: flex; gap: 10px; align-items: center; font-size: 0.46em; color: #4e3f60; margin-bottom: 8px;"><span style="width: 13px; height: 13px; border: 2px solid #5f51bd; border-radius: 50%; display: inline-block;"></span>Cancel</label>
+									<label style="display: flex; gap: 10px; align-items: center; font-size: 0.46em; color: #20152f; background: rgba(33, 232, 243, 0.16); border-radius: 8px; padding: 8px 10px;"><span style="width: 13px; height: 13px; border: 4px solid #0078d4; border-radius: 50%; display: inline-block; box-sizing: border-box;"></span>Confirm purchase</label>
+									<div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 12px;">
+										<span style="font-size: 0.46em; padding: 7px 12px; border: 1px solid #d8cff0; border-radius: 8px; color: #4e3f60;">Cancel</span>
+										<span style="font-size: 0.46em; padding: 7px 12px; border-radius: 8px; color: #20152f; background: #6ef0ce; font-weight: 700;">Confirm</span>
+									</div>
+								</div>
+							</div>
+							<div style="background: #fff; border: 1px solid #d8cff0; border-radius: 8px; box-shadow: 0 8px 20px rgba(50, 17, 95, 0.08); overflow: hidden;">
+								<div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; background: rgba(255, 214, 107, 0.22); border-bottom: 1px solid #d8cff0;">
+									<code style="font-size: 0.44em; color: #32115f;">connect-payments</code>
+									<span style="font-size: 0.4em; font-weight: 700; letter-spacing: 0.04em; color: #7a2e8a; background: #fff7d8; border: 1px solid rgba(255, 214, 107, 0.8); border-radius: 999px; padding: 4px 8px;">URL ELICITATION</span>
+								</div>
+								<div style="padding: 14px 18px;">
+									<p style="font-size: 0.5em; margin: 0 0 10px; color: #20152f;">Open a secure page to connect your payment provider.</p>
+									<div style="font-size: 0.42em; color: #4e3f60; background: #fbf8ff; border: 1px solid #d8cff0; border-radius: 8px; padding: 9px 10px; margin-bottom: 12px;">https://payments.example.com/connect</div>
+									<div style="display: flex; justify-content: flex-end; gap: 10px;">
+										<span style="font-size: 0.46em; padding: 7px 12px; border: 1px solid #d8cff0; border-radius: 8px; color: #4e3f60;">Cancel</span>
+										<span style="font-size: 0.46em; padding: 7px 12px; border-radius: 8px; color: #20152f; background: #ffd66b; font-weight: 700;">Open URL</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<aside class="notes">
+						Elicitations are server-to-client requests associated with an originating client request, such as during tools/call processing. Form mode collects structured input in the client and must not be used for secrets; URL mode handles sensitive or external flows out of band. In the next exercise, attendees add a purchase confirmation so the server does not blindly complete the purchase.
+					</aside>
+				</section>
+
+				<section>
+					<h3>Form mode elicitation flow</h3>
+					<svg viewBox="0 0 1120 430" role="img" aria-label="Sequence diagram showing form mode elicitation flow between user, MCP client, and MCP server" style="width: 100%; height: auto; display: block;">
+						<defs>
+							<marker id="elicit-flow-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
+								<path d="M0,0 L0,7 L10,3.5 z" fill="#20152f"/>
+							</marker>
+							<marker id="elicit-flow-dashed-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
+								<path d="M0,0 L0,7 L10,3.5 z" fill="#5f51bd"/>
+							</marker>
+						</defs>
+
+						<!-- Participants -->
+						<rect x="40" y="22" width="150" height="54" rx="8" fill="#fffaf1" stroke="#ffd66b" stroke-width="3"/>
+						<text x="115" y="56" text-anchor="middle" font-size="20" font-weight="700" fill="#32115f">User</text>
+						<rect x="485" y="22" width="150" height="54" rx="8" fill="rgba(0, 134, 163, 0.12)" stroke="#0086a3" stroke-width="3"/>
+						<text x="560" y="56" text-anchor="middle" font-size="20" font-weight="700" fill="#32115f">MCP Client</text>
+						<rect x="930" y="22" width="150" height="54" rx="8" fill="rgba(225, 149, 42, 0.14)" stroke="#e1952a" stroke-width="3"/>
+						<text x="1005" y="56" text-anchor="middle" font-size="20" font-weight="700" fill="#32115f">MCP Server</text>
+
+						<!-- Lifelines -->
+						<line x1="115" y1="76" x2="115" y2="415" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6 5"/>
+						<line x1="560" y1="76" x2="560" y2="415" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6 5"/>
+						<line x1="1005" y1="76" x2="1005" y2="415" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+						<!-- Initial tool call -->
+						<text x="780" y="112" text-anchor="middle" font-size="15" font-family="'Courier New', Courier, monospace" fill="#1a1a3e">tools/call id: 1</text>
+						<line x1="560" y1="125" x2="1005" y2="125" stroke="#20152f" stroke-width="2.4" marker-end="url(#elicit-flow-arrow)"/>
+						<rect x="850" y="142" width="230" height="36" rx="5" fill="rgba(255, 214, 107, 0.42)" stroke="#ffd66b"/>
+						<text x="965" y="166" text-anchor="middle" font-size="16" fill="#20152f">Server needs more info</text>
+
+						<!-- Elicitation response -->
+						<text x="780" y="212" text-anchor="middle" font-size="14" font-family="'Courier New', Courier, monospace" fill="#5f51bd">InputRequiredResult: elicitation/create</text>
+						<text x="780" y="230" text-anchor="middle" font-size="14" font-family="'Courier New', Courier, monospace" fill="#5f51bd">mode: "form"</text>
+						<line x1="1005" y1="240" x2="560" y2="240" stroke="#5f51bd" stroke-width="2.2" stroke-dasharray="7 6" marker-end="url(#elicit-flow-dashed-arrow)"/>
+
+						<!-- Client UI and user response -->
+						<rect x="74" y="214" width="395" height="44" rx="6" fill="rgba(33, 232, 243, 0.16)" stroke="#21e8f3"/>
+						<text x="272" y="242" text-anchor="middle" font-size="17" font-weight="700" fill="#32115f">Client presents elicitation UI</text>
+						<text x="335" y="298" text-anchor="middle" font-size="15" fill="#20152f">User provides requested information</text>
+						<line x1="115" y1="310" x2="560" y2="310" stroke="#20152f" stroke-width="2.4" marker-end="url(#elicit-flow-arrow)"/>
+
+						<!-- Retry with response -->
+						<rect x="505" y="332" width="370" height="42" rx="6" fill="rgba(255, 214, 107, 0.42)" stroke="#ffd66b"/>
+						<text x="690" y="359" text-anchor="middle" font-size="16" font-weight="700" fill="#20152f">Client retries request with new information</text>
+						<text x="780" y="397" text-anchor="middle" font-size="15" font-family="'Courier New', Courier, monospace" fill="#1a1a3e">tools/call id: 2 + user response</text>
+						<line x1="560" y1="410" x2="1005" y2="410" stroke="#20152f" stroke-width="2.4" marker-end="url(#elicit-flow-arrow)"/>
+					</svg>
+					<aside class="notes">
+						Form mode elicitation is nested inside an originating client request. The server does not start an unrelated conversation; it returns an input-required result, the client presents UI to the user, and then the client retries the original operation with the user-provided information.
+					</aside>
+				</section>
+
+				<section class="no-code-badge">
+					<h3>Elicitations in FastMCP</h3>
+					<pre style="margin-top: 18px; max-height: none; overflow: hidden;"><code class="language-python" style="font-size: 0.66em; line-height: 1.16; max-height: none; overflow: hidden;" data-trim data-noescape>
+@mcp.tool
+async def remove_expenses_for_date(
+  expense_date: Annotated[date, "Date to remove expenses for"],
+  ctx: Context,
+) -> str:
+  class DeleteExpensesConfirmation(BaseModel):
+    confirm: bool = Field(title="Delete expenses")
+
+  response = await ctx.elicit(
+    message=f"Delete expenses from {expense_date}?",
+    response_type=DeleteExpensesConfirmation,
+  )
+
+  if response.action != "accept" or not response.data.confirm:
+    return "Deletion cancelled."
+
+  # Delete matching rows from expenses.csv ...
+					</code></pre>
+					<p class="muted" style="font-size: 0.68em; margin-top: 14px;">🔗 Full example: <a target="_blank" href="../servers/expenses_tracker.py"><code>expenses_tracker.py</code></a><br>📖 Learn more: <a target="_blank" href="https://gofastmcp.com/servers/elicitation">gofastmcp.com/servers/elicitation</a></p>
+				</section>
+
+				<section>
+					<h3>MCP Apps</h3>
+					<p class="lead" style="font-size: 0.82em; margin-bottom: 16px;">MCP Apps let tools return rich, interactive UI that renders inside chat.</p>
+					<div style="display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 24px; align-items: stretch;">
+						<div>
+							<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 18px 22px;">
+								<p style="font-size: 0.82em; margin: 0 0 14px; color: #32115f;"><strong>Example uses</strong></p>
+								<ul class="tight" style="font-size: 0.58em; line-height: 1.35; margin: 0;">
+									<li>Drag-and-drop ordering</li>
+									<li>Visual profiling and flame graphs</li>
+									<li>Form-based selection</li>
+									<li>Data visualization dashboards</li>
+								</ul>
+							</div>
+						</div>
+						<div style="background: #fff; border: 1px solid #d8cff0; border-radius: 8px; box-shadow: 0 8px 20px rgba(50, 17, 95, 0.08); padding: 16px;">
+							<div style="display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 14px; align-items: start;">
+								<div style="width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, #21e8f3, #5f51bd); display: flex; align-items: center; justify-content: center; font-size: 0.85em;">🤖</div>
+								<div>
+									<p style="font-size: 0.5em; margin: 0 0 12px; color: #20152f;">Here's the performance profile for <code>handle_request()</code>:</p>
+									<div style="border: 1px solid #d8cff0; border-radius: 8px; overflow: hidden; background: #fbf8ff;">
+										<div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: rgba(95, 81, 189, 0.12); border-bottom: 1px solid #d8cff0;">
+											<span style="font-size: 0.44em; font-weight: 700; color: #0078d4;">🖥️ MCP App</span>
+											<code style="font-size: 0.42em; color: #32115f;">flame-graph</code>
+										</div>
+										<div style="padding: 14px; display: flex; flex-direction: column; gap: 7px;">
+											<div style="height: 30px; width: 100%; border-radius: 6px; background: rgba(255, 50, 200, 0.22); border: 1px solid rgba(255, 50, 200, 0.42); display: flex; align-items: center; padding: 0 10px; box-sizing: border-box; font-size: 0.42em; color: #20152f;">main() - 420ms</div>
+											<div style="height: 30px; width: 72%; border-radius: 6px; background: rgba(33, 232, 243, 0.22); border: 1px solid rgba(33, 232, 243, 0.55); display: flex; align-items: center; padding: 0 10px; box-sizing: border-box; font-size: 0.42em; color: #20152f;">handle_request() - 302ms</div>
+											<div style="display: flex; gap: 6px; width: 72%;">
+												<div style="height: 30px; flex: 3; border-radius: 6px; background: rgba(255, 214, 107, 0.42); border: 1px solid rgba(255, 214, 107, 0.8); display: flex; align-items: center; padding: 0 10px; box-sizing: border-box; font-size: 0.4em; color: #20152f;">db.query()</div>
+												<div style="height: 30px; flex: 1; border-radius: 6px; background: rgba(110, 240, 206, 0.35); border: 1px solid rgba(32, 187, 151, 0.55); display: flex; align-items: center; padding: 0 8px; box-sizing: border-box; font-size: 0.4em; color: #20152f;">serialize()</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="margin-top: 18px;">
+						<p style="font-size: 0.54em; margin: 0 0 10px; color: #32115f; font-weight: 700;">Examples of MCP servers using MCP Apps</p>
+						<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;">
+							<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 13px 15px; min-height: 94px;">
+								<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+									<div style="width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, #ff32c8, #ffd66b); display: flex; align-items: center; justify-content: center; font-size: 0.72em;">📕</div>
+									<p style="font-size: 0.54em; margin: 0; color: #32115f; font-weight: 700;">Storybook</p>
+								</div>
+								<p style="font-size: 0.4em; line-height: 1.28; margin: 0; color: #4b3c63;">Interactive component previews from design-system tasks.</p>
+							</div>
+							<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 13px 15px; min-height: 94px;">
+								<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+									<div style="width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, #5f51bd, #21e8f3); display: flex; align-items: center; justify-content: center; font-size: 0.72em;">✏️</div>
+									<p style="font-size: 0.54em; margin: 0; color: #32115f; font-weight: 700;">Excalidraw</p>
+								</div>
+								<p style="font-size: 0.4em; line-height: 1.28; margin: 0; color: #4b3c63;">Live diagrams in chat for visual planning and edits.</p>
+							</div>
+							<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 13px 15px; min-height: 94px;">
+								<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+									<div style="width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, #6ef0ce, #ff32c8); display: flex; align-items: center; justify-content: center; font-size: 0.72em;">🎨</div>
+									<p style="font-size: 0.54em; margin: 0; color: #32115f; font-weight: 700;">Figma</p>
+								</div>
+								<p style="font-size: 0.4em; line-height: 1.28; margin: 0; color: #4b3c63;">Design context and assets rendered where agents work.</p>
+							</div>
+						</div>
+					</div>
+					<aside class="notes">
+						MCP Apps are useful when prose is a poor interface. They let tool responses include interactive components for selection, visualization, exploration, and editing directly in the client.
+					</aside>
+				</section>
+
+				<section>
+					<h3>MCP Apps flow</h3>
+					<svg viewBox="0 0 1120 452" role="img" aria-label="Sequence diagram showing MCP Apps flow between user, agent, app iframe, and MCP server" style="width: 100%; height: auto; display: block; margin-top: -4px;">
+						<defs>
+							<marker id="mcp-app-flow-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
+								<path d="M0,0 L0,7 L10,3.5 z" fill="#20152f"/>
+							</marker>
+							<marker id="mcp-app-flow-dashed-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
+								<path d="M0,0 L0,7 L10,3.5 z" fill="#5f51bd"/>
+							</marker>
+						</defs>
+
+						<!-- Participants -->
+						<rect x="30" y="18" width="148" height="50" rx="8" fill="#fffaf1" stroke="#ffd66b" stroke-width="3"/>
+						<text x="104" y="50" text-anchor="middle" font-size="19" font-weight="700" fill="#32115f">User</text>
+						<rect x="296" y="18" width="148" height="50" rx="8" fill="#edf4fc" stroke="#5f51bd" stroke-width="3"/>
+						<text x="370" y="50" text-anchor="middle" font-size="19" font-weight="700" fill="#32115f">Agent</text>
+						<rect x="612" y="18" width="174" height="50" rx="8" fill="#fbf8ff" stroke="#ff32c8" stroke-width="3"/>
+						<text x="699" y="50" text-anchor="middle" font-size="18" font-weight="700" fill="#32115f">MCP App iframe</text>
+						<rect x="932" y="18" width="158" height="50" rx="8" fill="rgba(225, 149, 42, 0.14)" stroke="#e1952a" stroke-width="3"/>
+						<text x="1011" y="50" text-anchor="middle" font-size="18" font-weight="700" fill="#32115f">MCP Server</text>
+
+						<!-- Lifelines -->
+						<line x1="104" y1="68" x2="104" y2="438" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6 5"/>
+						<line x1="370" y1="68" x2="370" y2="438" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6 5"/>
+						<line x1="699" y1="68" x2="699" y2="438" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6 5"/>
+						<line x1="1011" y1="68" x2="1011" y2="438" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+						<!-- Initial user request -->
+						<text x="232" y="92" text-anchor="middle" font-size="15" fill="#20152f">"show me analytics"</text>
+						<line x1="104" y1="104" x2="370" y2="104" stroke="#20152f" stroke-width="2.3" marker-end="url(#mcp-app-flow-arrow)"/>
+						<rect x="74" y="122" width="650" height="38" rx="6" fill="rgba(255, 214, 107, 0.58)" stroke="#ffd66b"/>
+						<text x="399" y="147" text-anchor="middle" font-size="17" font-weight="700" fill="#20152f">Interactive app rendered in chat</text>
+
+						<!-- Tool call to load data -->
+						<text x="690" y="194" text-anchor="middle" font-size="15" font-family="'Courier New', Courier, monospace" fill="#20152f">tools/call</text>
+						<line x1="370" y1="207" x2="1011" y2="207" stroke="#20152f" stroke-width="2.3" marker-end="url(#mcp-app-flow-arrow)"/>
+						<text x="690" y="239" text-anchor="middle" font-size="15" fill="#5f51bd">tool input/result</text>
+						<line x1="1011" y1="250" x2="370" y2="250" stroke="#5f51bd" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#mcp-app-flow-dashed-arrow)"/>
+						<text x="535" y="283" text-anchor="middle" font-size="15" fill="#5f51bd">tool result pushed to app</text>
+						<line x1="370" y1="294" x2="699" y2="294" stroke="#5f51bd" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#mcp-app-flow-dashed-arrow)"/>
+
+						<!-- User interaction from app -->
+						<text x="402" y="331" text-anchor="middle" font-size="15" fill="#20152f">user interacts</text>
+						<line x1="104" y1="342" x2="699" y2="342" stroke="#20152f" stroke-width="2.3" marker-end="url(#mcp-app-flow-arrow)"/>
+						<text x="535" y="374" text-anchor="middle" font-size="15" font-family="'Courier New', Courier, monospace" fill="#20152f">tools/call request</text>
+						<line x1="699" y1="385" x2="370" y2="385" stroke="#20152f" stroke-width="2.3" marker-end="url(#mcp-app-flow-arrow)"/>
+						<text x="690" y="416" text-anchor="middle" font-size="15" fill="#20152f">forwarded call + fresh data</text>
+						<line x1="370" y1="427" x2="1011" y2="427" stroke="#20152f" stroke-width="2.3" marker-end="url(#mcp-app-flow-arrow)"/>
+					</svg>
+					<aside class="notes">
+						An MCP App is rendered in the client, but it can still participate in the tool loop. The agent calls the server, pushes returned data into the app iframe, the user interacts with the UI, and the app can request additional tool calls through the host.
+					</aside>
+				</section>
+
+				<section>
+					<h3>Making MCP Apps with FastMCP</h3>
+					<p class="lead" style="font-size: 0.82em; margin-bottom: 18px;">Four paths, from Python components to custom UI.</p>
+					<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;">
+						<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 16px 20px; min-height: 145px;">
+							<div style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #21e8f3, #5f51bd); display: flex; align-items: center; justify-content: center; font-size: 0.82em; margin-bottom: 10px;">⚡</div>
+							<p style="font-size: 0.68em; margin: 0 0 8px; color: #32115f;"><strong>Prefab Apps</strong></p>
+							<p style="font-size: 0.5em; line-height: 1.28; margin: 0; color: #4b3c63;">Quickest path: add <code>app=True</code> to a tool and return Prefab components.</p>
+						</div>
+						<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 16px 20px; min-height: 145px;">
+							<div style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #6ef0ce, #21e8f3); display: flex; align-items: center; justify-content: center; font-size: 0.82em; margin-bottom: 10px;">🧩</div>
+							<p style="font-size: 0.68em; margin: 0 0 8px; color: #32115f;"><strong>FastMCPApp</strong></p>
+							<p style="font-size: 0.5em; line-height: 1.28; margin: 0; color: #4b3c63;">For multi-tool UIs: separate model-visible entry points from UI-only backend tools.</p>
+						</div>
+						<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 16px 20px; min-height: 145px;">
+							<div style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #5f51bd, #ff32c8); display: flex; align-items: center; justify-content: center; font-size: 0.82em; margin-bottom: 10px;">🌐</div>
+							<p style="font-size: 0.68em; margin: 0 0 8px; color: #32115f;"><strong>Custom HTML</strong></p>
+							<p style="font-size: 0.5em; line-height: 1.28; margin: 0; color: #4b3c63;">Use your own HTML, CSS, JavaScript, or framework for maps, 3D, video, and bespoke UI.</p>
+						</div>
+						<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 16px 20px; min-height: 145px;">
+							<div style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #ffd66b, #ff32c8); display: flex; align-items: center; justify-content: center; font-size: 0.82em; margin-bottom: 10px;">✨</div>
+							<p style="font-size: 0.68em; margin: 0 0 8px; color: #32115f;"><strong>Generative AI</strong></p>
+							<p style="font-size: 0.5em; line-height: 1.28; margin: 0; color: #4b3c63;">Let the model design Prefab UI at runtime, execute it in a sandbox, and stream the result.</p>
+						</div>
+					</div>
+					<p class="muted" style="font-size: 0.52em; margin: 12px 0 0;"><strong>Learn more:</strong> <a target="_blank" href="https://gofastmcp.com/apps/overview">gofastmcp.com/apps/overview</a></p>
+					<aside class="notes">
+						Most apps should start with Prefab Apps. Move to FastMCPApp when the UI needs multiple backend tools or composition safety. Generative UI lets the model create UI dynamically. Custom HTML is for full frontend control.
+					</aside>
+				</section>
+
+				<section class="no-code-badge">
+					<h3>Prefab app with FastMCP</h3>
+					<pre style="margin-top: 18px; max-height: none; overflow: hidden;"><code class="language-python" style="font-size: 0.75em; line-height: 1.16; max-height: none; overflow: hidden;" data-trim data-noescape>
+from prefab_ui.app import PrefabApp
+from prefab_ui.components import Column, Heading
+from prefab_ui.components.table import Table, TableBody, TableCell, TableHead, TableHeader, TableRow
+
+@mcp.tool(app=True)
+def render_expenses() -> PrefabApp:
+  """Render the expenses as an interactive table."""
+  expenses = load_expenses_from_csv()
+
+  with Column(gap=4) as view:
+    Heading("Expenses")
+    with Table():
+      with TableHeader():
+        with TableRow():
+          TableHead("Date")
+	      TableHead("Amount")
+        with TableBody():
+          for expense in expenses:
+            with TableRow():
+              TableCell(expense["date"])
+              TableCell(f"${float(expense['amount']):.2f}")
+
+  return PrefabApp(view=view)
+					</code></pre>
+					<p class="muted" style="font-size: 0.68em; margin-top: 14px;">🔗 Full example: <a target="_blank" href="../servers/expenses_tracker.py"><code>expenses_tracker.py</code></a></p>
+					<aside class="notes">
+						The smallest Prefab pattern is a normal FastMCP tool with app=True. The tool returns a PrefabApp instead of plain text, and Prefab components define the UI that the client renders in chat.
+					</aside>
+				</section>
+
+
+				<section class="heading-only">
+					<h2>Next steps</h2>
 					<p class="lead" style="margin-bottom: 30px;">New MCP features turn agents from executors into collaborators.</p>
 					<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;">
 						<div style="background: rgba(255,255,255,0.72); border: 1px solid #d8cff0; border-radius: 8px; padding: 26px 24px; min-height: 210px;">
@@ -1422,9 +1771,7 @@ def render_expenses() -> PrefabApp:
 						<a href="https://github.com/pamelafox/github-copilot-mcp-tutorial/blob/main/exercise4.md" target="_blank"><code>github.com/.../exercise4.md</code></a>
 					</p>
 
-					<p style="margin-top: 100px;">🙋🏽‍♀️ 🙋🏻‍♂️ 🙋🏿 🙋🏼‍♀️ 🙋🏾‍♂️ Got a question? Raise your hand, we'll come around!</p>
-				<section class="heading-only">
-					<h2>Next steps</h2>
+					<p style="margin-top: 100px;">🙋🏽‍♀️ 🙋🏻‍♂️ 🙋🏿 🙋🏼‍♀️ 🙋🏾‍♂️ Got a question? Post it in the chat!</p>
 				</section>
 
 				<section>
@@ -1499,6 +1846,7 @@ def render_expenses() -> PrefabApp:
 			function updateTitleSlideBackground(event) {
 				const revealElement = document.querySelector('.reveal');
 				const currentSlide = event && event.currentSlide ? event.currentSlide : Reveal.getCurrentSlide();
+				if (!currentSlide) return;
 				revealElement.classList.toggle('title-slide-active', currentSlide.classList.contains('title-slide'));
 			}
 
