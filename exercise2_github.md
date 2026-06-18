@@ -43,8 +43,15 @@ Follow the instructions for your agent: [GitHub Copilot in VS Code](#github-copi
 
 The GitHub Copilot CLI already comes bundled with the GitHub MCP server.
 
-1. Send "/mcp show" to the agent to see currently installed MCP servers.
-2. Confirm that you see "github-mcp-server" under the list of "Built-in" MCP servers.
+1. Start Copilot CLI with all GitHub MCP toolsets enabled:
+
+   ```bash
+   copilot --enable-all-github-mcp-tools
+   ```
+
+   For more setup and customization options, see the [Copilot CLI installation guide](https://github.com/github/github-mcp-server/blob/main/docs/installation-guides/install-copilot-cli.md).
+
+2. Send "/mcp show github-mcp-server" to confirm the built-in server is available and has all tools enabled (around 100).
 3. Move on to [Step 2](#step-2-explore-the-issues).
 
 
@@ -69,7 +76,7 @@ This repository has a small quiz script in `src/quiz.py` with some known bugs an
 1. Ask Copilot to list the open issues on this repository:
 
    ```text
-   How many open issues are there on this repository? Summarize them for me.
+   How many open issues are there on this repository? Summarize the issues for me.
    ```
 
    > 🪧 **Note:** Watch how Copilot calls the GitHub MCP server's `list_issues` tool. You may need to click **Continue** to approve the tool call.
@@ -80,7 +87,7 @@ This repository has a small quiz script in `src/quiz.py` with some known bugs an
    Which of these issues would be the easiest to fix? Pick one for me.
    ```
 
-3. Before implementing, try running the quiz yourself to see the bugs firsthand:
+3. Before implementing, you can try running the quiz yourself to see the bugs firsthand:
 
    ```bash
    python src/quiz.py
@@ -89,7 +96,7 @@ This repository has a small quiz script in `src/quiz.py` with some known bugs an
 4. Ask Copilot to implement the issue:
 
    ```text
-   Let's fix that issue. Follow these steps:
+   Fix that issue. Follow these steps:
    1. Checkout a new local branch for the fix.
    2. Make the changes to src/quiz.py.
    3. Commit and push the branch.
