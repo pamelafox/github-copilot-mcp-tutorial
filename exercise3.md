@@ -131,17 +131,17 @@ With the server running, add it to GitHub Copilot from Exercise 1.
 
 ### GitHub Copilot in VS Code
 
-1. Add to `.vscode/mcp.json`:
+1. Add to `.mcp.json`:
 
     ```json
-    {
-      "servers": {
-        "product-store": {
-          "type": "http",
-          "url": "http://localhost:8420/mcp"
+        {
+            "mcpServers": {
+                "product-store": {
+                    "type": "http",
+                    "url": "http://localhost:8420/mcp"
+                }
+            }
         }
-      }
-    }
     ```
 
 2. Select "Start" from the CodeLens menu above the server entry.

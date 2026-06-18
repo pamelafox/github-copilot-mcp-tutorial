@@ -16,11 +16,11 @@ Follow the instructions for your agent: [GitHub Copilot in VS Code](#github-copi
 
 ### GitHub Copilot in VS Code
 
-1. Add the GitHub MCP server to your `.vscode/mcp.json`:
+1. Add the GitHub MCP server to your `.mcp.json`:
 
     ```json
     {
-       "servers": {
+       "mcpServers": {
           "github": {
              "type": "http",
              "url": "https://api.githubcopilot.com/mcp/"
@@ -41,7 +41,7 @@ Follow the instructions for your agent: [GitHub Copilot in VS Code](#github-copi
 
 ### GitHub Copilot CLI
 
-The GitHub Copilot CLI already comes bundled with the GitHub MCP server.
+The GitHub Copilot CLI already comes bundled with the GitHub MCP server, but it only has a small subset of tools enabled by default.
 
 1. Start Copilot CLI with all GitHub MCP toolsets enabled:
 
@@ -53,6 +53,22 @@ The GitHub Copilot CLI already comes bundled with the GitHub MCP server.
 
 2. Send "/mcp show github-mcp-server" to confirm the built-in server is available and has all tools enabled (around 100).
 3. Move on to [Step 2](#step-2-explore-the-issues).
+
+### GitHub Copilot App
+
+The GitHub Copilot App already comes bundled with the GitHub MCP server, but it only has a small subset of tools enabled by default. Since the Copilot app is a wrapper for the CLI, you need to customize the tools using the CLI commands.
+
+1. Start Copilot CLI with all GitHub MCP toolsets enabled:
+
+   ```bash
+   copilot --enable-all-github-mcp-tools
+   ```
+
+   For more setup and customization options, see the [Copilot CLI installation guide](https://github.com/github/github-mcp-server/blob/main/docs/installation-guides/install-copilot-cli.md).
+
+2. Send "/mcp show github-mcp-server" to confirm the built-in server is available and has all tools enabled (around 100).
+3. Move on to [Step 2](#step-2-explore-the-issues).
+
 
 
 ### GitHub Copilot app

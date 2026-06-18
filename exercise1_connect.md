@@ -133,18 +133,18 @@ Follow the instructions for your agent: [GitHub Copilot in VS Code](#github-copi
 
 ### GitHub Copilot in VS Code
 
-1. Open (or create) the file `.vscode/mcp.json` in your workspace and make sure it contains a server configuration pointed at the Microsoft Learn MCP server URL:
+1. Open (or create) the file `.mcp.json` in your workspace and make sure it contains a server configuration pointed at the Microsoft Learn MCP server URL:
 
 
    ```json
-   {
-     "servers": {
-       "mslearn": {
-         "type": "http",
-         "url": "https://learn.microsoft.com/api/mcp"
+    {
+       "mcpServers": {
+          "mslearn": {
+             "type": "http",
+             "url": "https://learn.microsoft.com/api/mcp"
+          }
        }
-     }
-   }
+    }
    ```
 
 2. Select "Start" on the server in the config file.
