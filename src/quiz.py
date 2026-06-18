@@ -76,7 +76,9 @@ def run_quiz():
             print("✅ Correct!\n")
             score += 1
         else:
-            print("❌ Wrong!\n")
+            correct = q["answer"]
+            correct_text = q["options"][correct]
+            print(f"❌ Wrong! The correct answer was {correct}) {correct_text}\n")
 
     print("=" * 50)
     print(f"  Quiz complete! Your score: {score}/{len(QUESTIONS)}")
