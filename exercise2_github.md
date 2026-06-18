@@ -197,6 +197,14 @@ The GitHub MCP server's `search_code` tool lets you search across **all of GitHu
    python src/quiz.py
    ```
 
+6. Once you're happy with the changes, ask Copilot to commit and open a pull request:
+
+   ```text
+   Commit these changes to a new branch, push it, and open a pull request.
+   ```
+
+   > 🪧 **Note:** The Copilot app doesn't have the GitHub MCP server's `create_pull_request` tool, but it can still create PRs using the `gh` CLI or its built-in tools.
+
 ### Take it further
 
 If you finish early, try one of these:
