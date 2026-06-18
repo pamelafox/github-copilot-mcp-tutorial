@@ -186,7 +186,7 @@ The GitHub MCP server's `search_code` tool lets you search across **all of GitHu
 4. Based on what you found, ask Copilot to improve the quiz:
 
    ```text
-   Improve quiz.py based off learnings from that quiz and fix any bugs you notice.
+   Improve quiz.py based on what you learned from that quiz and fix any bugs you notice.
    ```
 
 5. Review the changes Copilot made and try running the updated quiz:
