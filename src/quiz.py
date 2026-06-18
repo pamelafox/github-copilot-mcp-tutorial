@@ -70,17 +70,19 @@ def run_quiz():
             print(f"  {letter}) {text}")
         print()
 
-        user_answer = input("Your answer: ")
+        user_answer = input("Your answer: ").strip().upper()
 
         if user_answer == q["answer"]:
             print("✅ Correct!\n")
             score += 1
         else:
-            print("❌ Wrong!\n")
+            correct = q["answer"]
+            correct_text = q["options"][correct]
+            print(f"❌ Wrong! The correct answer was {correct}) {correct_text}\n")
 
     print("=" * 50)
     print(f"  Quiz complete! Your score: {score}/{len(QUESTIONS)}")
-    pct = score / (len(QUESTIONS) + 1) * 100
+    pct = score / len(QUESTIONS) * 100
     print(f"  Percentage: {pct:.0f}%")
     print("=" * 50)
 
