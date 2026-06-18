@@ -186,9 +186,7 @@ The GitHub MCP server's `search_code` tool lets you search across **all of GitHu
 4. Based on what you found, ask Copilot to improve the quiz:
 
    ```text
-   Based on the patterns you found in other quiz implementations, refactor src/quiz.py to:
-   1. Use a Question class or dataclass instead of plain dictionaries.
-   2. Fix any bugs you notice (hint: check the score percentage calculation).
+   Improve quiz.py based off learnings from that quiz and fix any bugs you notice.
    ```
 
 5. Review the changes Copilot made and try running the updated quiz:
