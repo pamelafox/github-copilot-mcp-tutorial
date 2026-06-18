@@ -168,7 +168,7 @@ The GitHub MCP server's `search_code` tool lets you search across **all of GitHu
 1. First, take a look at the quiz script in this repository:
 
    ```text
-   Use the GitHub MCP server's get_file_contents tool to read src/quiz.py from the pamelafox/github-copilot-mcp-tutorial repository. What patterns does it use?
+   Read src/quiz.py. What patterns does it use? Are there any bugs?
    ```
 
 2. Now search GitHub for other Python quiz implementations:
