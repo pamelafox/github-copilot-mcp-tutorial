@@ -1,6 +1,8 @@
 """MCP Knowledge Quiz - Test your knowledge of the Model Context Protocol!"""
 
-QUESTIONS = [
+import random
+
+DEFAULT_QUESTIONS = [
     {
         "question": "What does MCP stand for?",
         "options": {
@@ -54,36 +56,77 @@ QUESTIONS = [
 ]
 
 
-def run_quiz():
-    print("=" * 50)
-    print("  Welcome to the MCP Knowledge Quiz!")
-    print("=" * 50)
-    print()
+class Quiz:
+    """An interactive multiple-choice quiz."""
 
-    score = 0
+    def __init__(self, questions: list[dict], shuffle: bool = True):
+        self.questions = list(questions)
+        self.score = 0
+        if shuffle:
+            random.shuffle(self.questions)
 
-    for i, q in enumerate(QUESTIONS):
-        print(f"Question {i + 1} of {len(QUESTIONS)}")
-        print(q["question"])
+    def display_question(self, index: int, question: dict):
+        print(f"Question {index + 1} of {len(self.questions)}")
+        print(question["question"])
         print()
-        for letter, text in q["options"].items():
+        for letter, text in question["options"].items():
             print(f"  {letter}) {text}")
         print()
 
-        user_answer = input("Your answer: ")
+    def get_user_answer(self, question: dict) -> str:
+        valid_options = set(question["options"].keys())
+        while True:
+            user_input = input("Your answer: ").strip().upper()
+            if user_input in valid_options:
+                return user_input
+            print(f"Please enter one of: {', '.join(sorted(valid_options))}")
 
-        if user_answer == q["answer"]:
+    def evaluate_answer(self, user_answer: str, correct_answer: str) -> bool:
+        if user_answer == correct_answer:
             print("✅ Correct!\n")
-            score += 1
+            self.score += 1
+            return True
         else:
-            print("❌ Wrong!\n")
+            print(f"❌ Wrong! The answer was: {correct_answer}\n")
+            return False
 
-    print("=" * 50)
-    print(f"  Quiz complete! Your score: {score}/{len(QUESTIONS)}")
-    pct = score / (len(QUESTIONS) + 1) * 100
-    print(f"  Percentage: {pct:.0f}%")
-    print("=" * 50)
+    def display_results(self):
+        total = len(self.questions)
+        pct = self.score / total * 100
+        print("=" * 50)
+        print(f"  Quiz complete! Your score: {self.score}/{total}")
+        print(f"  Percentage: {pct:.0f}%")
+        if self.score == total:
+            print("  🎉 Perfect score!")
+        elif pct >= 60:
+            print("  👍 Good job!")
+        else:
+            print("  📚 Keep learning!")
+        print("=" * 50)
+
+    def run(self):
+        print("=" * 50)
+        print("  Welcome to the MCP Knowledge Quiz!")
+        print("=" * 50)
+        print()
+
+        for i, q in enumerate(self.questions):
+            self.display_question(i, q)
+            user_answer = self.get_user_answer(q)
+            self.evaluate_answer(user_answer, q["answer"])
+
+        self.display_results()
+
+
+def play_again() -> bool:
+    response = input("Play again? (yes/no): ").strip().lower()
+    return response in ("yes", "y")
 
 
 if __name__ == "__main__":
-    run_quiz()
+    while True:
+        quiz = Quiz(DEFAULT_QUESTIONS)
+        quiz.run()
+        if not play_again():
+            print("Thanks for playing!")
+            break
