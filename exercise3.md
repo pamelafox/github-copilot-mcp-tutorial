@@ -3,7 +3,7 @@
 In this exercise, you'll build an MCP server from scratch using [FastMCP](https://gofastmcp.com/). You'll create your own **store** server — selling whatever products you want — with tools for browsing and buying, then test it with your coding agent and the MCP Inspector.
 
 - [Step 1: Create the server skeleton](#step-1-create-the-server-skeleton)
-- [Step 2: Design your inventory](#step-2-design-your-inventory)
+- [Step 2: Customize the store](#step-2-customize-the-store)
 - [Step 3: Add a tool to list products](#step-3-add-a-tool-to-list-products)
 - [Step 4: Add a tool to buy a product](#step-4-add-a-tool-to-buy-a-product)
 - [Step 5: Run and test the server](#step-5-run-and-test-the-server)
@@ -21,16 +21,20 @@ import logging
 from typing import Annotated
 
 from fastmcp import FastMCP
+from fastmcp.exceptions import ToolError
 
 logging.basicConfig(level=logging.WARNING, format="%(asctime)s - %(message)s")
 logger = logging.getLogger("StoreMCP")
 logger.setLevel(logging.INFO)
 
-mcp = FastMCP("________")  # TODO: Name your store!
+mcp = FastMCP("Bake & Take")
 
 # In-memory product inventory: name -> {price, quantity}
 INVENTORY = {
-    # TODO: Add your products here (Step 2)
+    "Croissant": {"price": 3.50, "quantity": 40},
+    "Sourdough Loaf": {"price": 8.00, "quantity": 12},
+    "Cinnamon Roll": {"price": 4.25, "quantity": 20},
+    "Blueberry Muffin": {"price": 3.00, "quantity": 35},
 }
 
 # TODO: Add your tools here (Steps 3 and 4)
@@ -43,65 +47,54 @@ if __name__ == "__main__":
 
 ---
 
-## Step 2: Design your inventory
+## Step 2: Customize the store
 
-Fill in the `INVENTORY` dictionary with **your own products**. Pick a theme — here are some ideas:
+The starter code uses a bakery theme, but you can change it to anything you like. Pick a theme and update the `FastMCP` name and `INVENTORY` in your file:
 
 | Theme | Example products |
 | --- | --- |
-| Bakery | Croissant, Sourdough Loaf, Cinnamon Roll |
 | Bookshop | Python Crash Course, Designing Data-Intensive Applications |
 | Plant Shop | Monstera, Snake Plant, Pothos |
 | Coffee Roaster | Ethiopian Yirgacheffe, Colombian Supremo |
 | Record Store | Kind of Blue (Miles Davis), Rumours (Fleetwood Mac) |
 
-Each product needs a `price` and `quantity`. For example:
-
-```python
-INVENTORY = {
-    "Croissant": {"price": 3.50, "quantity": 40},
-    # ...
-}
-```
-
-Add at least 3–5 products.
-
-Give your store a name too, by updating the `FastMCP("________")` line to match your theme (e.g. `FastMCP("Bake & Shake")`).
+Each product needs a `price` and `quantity`. Feel free to keep the bakery if you like it — just make sure you have at least 3–5 products before moving on.
 
 ---
 
 ## Step 3: Add a tool to list products
 
-Add a tool that returns the current product listings. Here's the structure — fill in the implementation:
+Add a tool that returns the current product listings:
 
 ```python
 @mcp.tool
-async def list_products() -> # TODO: return type:
+async def list_products() -> dict:
     """List all available products with their prices and stock levels."""
-    # TODO: Return the inventory as the specified return type
+    return INVENTORY
 ```
 
 ---
 
 ## Step 4: Add a tool to buy a product
 
-Add a tool that "buys" a product by reducing its quantity in the inventory. Fill in the arguments and implementation:
+Add a tool that "buys" a product by reducing its quantity in the inventory.
 
 ```python
 @mcp.tool
 async def buy_product(
-    # TODO: Add arguments for this tool using Annotated types.
-    # What does the LLM need to provide to buy a product?
-    # Hint: You'll need at least a product name and a quantity.
-) -> # TODO: return type:
+    name: Annotated[str, "Name of the product"],
+    quantity: Annotated[int, "Quantity of product to buy"],
+) -> str:
     """Buy a product from the store, reducing its inventory."""
-    # TODO: Implement the buy logic:
-    # 1. Check if the product exists in INVENTORY
-    # 2. Check if there's enough stock
-    # 3. Reduce the quantity and return a success message
+    if name not in INVENTORY:
+        raise ToolError(f"'{name}' is not available in the store.")
+    product = INVENTORY[name]
+    if product["quantity"] < quantity:
+        raise ToolError(f"Only {product['quantity']} units of '{name}' are in stock.")
+    product["quantity"] -= quantity
+    total = product["price"] * quantity
+    return f"Purchased {quantity}x {name} for ${total:.2f}. Remaining stock: {product['quantity']}."
 ```
-
-For reference, you can see what a tool with typed arguments looks like in FastMCP (from the [expenses demo server](servers/expenses_tracker.py)). Each argument uses `Annotated[type, "description"]` so the LLM knows what to pass.
 
 ---
 
@@ -125,28 +118,38 @@ The server is now listening at `http://localhost:8420/mcp`.
 
 ## Step 6: Test with GitHub Copilot
 
-With the server running, add it to GitHub Copilot from Exercise 1.
+With the server running, add it to GitHub Copilot.
 
 ### GitHub Copilot in VS Code
 
 1. Add to `.mcp.json`:
 
     ```json
-        {
-            "mcpServers": {
-                "product-store": {
-                    "type": "http",
-                    "url": "http://localhost:8420/mcp"
-                }
+    {
+        "mcpServers": {
+            "product-store": {
+                "type": "http",
+                "url": "http://localhost:8420/mcp"
             }
         }
+    }
     ```
 
 2. Select "Start" from the CodeLens menu above the server entry.
 
+3. Close the `store_server.py` file so that Copilot does not keep the file in its direct context and try to answer questions based on the file itself.
+
 3. Open the "Configure tools" button from the Copilot chat, and ensure that "product-store" mcp server is enabled, with the expected tools listed.
 
-4. Try a prompt like "What products are available in the store?" Make sure that Copilot uses the MCP server to answer the question, **not** the local file. If you don't see an MCP tool call, you may need to close the file and start a new chat so that Copilot doesn't base its answer off of the file itself.
+4. Ask Copilot to query the store:
+
+    ```text
+    What products are available in the store?
+    ```
+
+    Make sure that Copilot uses the MCP server to answer the question, **not** the local file.
+
+5. Ask Copilot to buy a product from the store, based on the listed products.
 
 ### GitHub Copilot CLI
 
@@ -156,7 +159,7 @@ With the server running, add it to GitHub Copilot from Exercise 1.
    copilot mcp add --transport http product-store http://localhost:8420/mcp
    ```
 
-2. Try a prompt like:
+2. Ask Copilot to query the store:
 
    ```bash
    copilot -i "What products are available in the store?"
@@ -174,7 +177,7 @@ With the server running, add it to GitHub Copilot from Exercise 1.
    * For URL, enter "http://localhost:8420/mcp"
    * Select "Add server"
 
-5. Try a prompt like:
+5. In a new chat, ask Copilot to query the store:
 
    ```text
    What products are available in the store?
