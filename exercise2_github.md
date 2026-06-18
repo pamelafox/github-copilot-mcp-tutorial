@@ -63,7 +63,7 @@ This repository has a small quiz script in `src/quiz.py` with some known bugs an
 
    ```text
    Fix that issue. Follow these steps:
-   1. Checkout a new local branch for the fix.
+   1. Check out a new local branch for the fix.
    2. Make the changes to src/quiz.py.
    3. Commit and push the branch.
    4. Create a pull request that references the issue.
