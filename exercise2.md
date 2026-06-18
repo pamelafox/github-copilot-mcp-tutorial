@@ -207,6 +207,10 @@ The GitHub MCP server's `search_code` tool lets you search across **all of GitHu
 
 If you finish early, try one of these:
 
-- **Search for more patterns** — Ask Copilot to search GitHub for quiz apps that use features like randomized question order, difficulty levels, or timed questions, and apply one of those ideas.
-- **Explore another repo** — Use `get_file_contents` to browse the structure of a well-known open source project without cloning it.
-- **Find MCP examples** — Use `search_code` to find other MCP server implementations on GitHub and compare their approaches.
+- **Search for more patterns**: Ask Copilot to search GitHub for quiz apps that use features like randomized question order, difficulty levels, or timed questions, and apply one of those ideas.
+- **Explore another repo**: Use `get_file_contents` to browse the structure of a well-known open source project without cloning it.
+- **Find MCP examples**: Use `search_code` to find other MCP server implementations on GitHub and compare their approaches.
+- **Try another authenticated server**: Connect to one of these Microsoft MCP servers that also use OAuth:
+  - [Azure DevOps MCP](https://learn.microsoft.com/azure/devops/mcp-server/mcp-server-overview) — query work items, repos, pipelines, and wikis in Azure DevOps
+  - [Work IQ MCP](https://github.com/microsoft/work-iq) — search emails, meetings, documents, and Teams messages from Microsoft 365
+  - [Azure MCP](https://learn.microsoft.com/azure/developer/azure-mcp-server/get-started) — manage Azure resources, storage, and AI services
