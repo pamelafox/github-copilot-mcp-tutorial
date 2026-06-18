@@ -174,7 +174,7 @@ The GitHub MCP server's `search_code` tool lets you search across **all of GitHu
 2. Now search GitHub for other Python quiz implementations:
 
    ```text
-   Use the GitHub MCP server's search_code tool to search for Python files that contain both "class Question" and "def run_quiz". Show me what you find.
+   Search for Python files in other GitHub repos that implement a quiz in a Python script using OOP. Summarize 5 most similar scripts.
    ```
 
 3. Pick an interesting result and explore it:
