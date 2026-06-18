@@ -8,8 +8,6 @@ In this exercise, you'll build an MCP server from scratch using [FastMCP](https:
 - [Step 4: Add a tool to buy a product](#step-4-add-a-tool-to-buy-a-product)
 - [Step 5: Run and test the server](#step-5-run-and-test-the-server)
 - [Step 6: Test with GitHub Copilot](#step-6-test-with-github-copilot)
-- [Step 7: Test with MCP Inspector](#step-7-test-with-mcp-inspector)
-- [Step 8: Test with MCPJam](#step-8-test-with-mcpjam)
 - [Take it further](#take-it-further)
 
 ---
@@ -164,45 +162,23 @@ With the server running, add it to GitHub Copilot from Exercise 1.
    copilot -i "What products are available in the store?"
    ```
 
----
+### GitHub Copilot app
 
-## Step 7: Test with MCP Inspector
+1. Open the GitHub Copilot app.
+2. Select the "Settings" (gear) icon in the bottom left.
+3. Select "MCP servers" from settings menu.
+4. Select "+ Add server" and "Add custom server".
 
-[MCP Inspector](https://github.com/modelcontextprotocol/inspector) lets you test your server directly without going through an LLM.
+   * For server name, enter "product-store"
+   * Select "HTTP" next to server name.
+   * For URL, enter "http://localhost:8420/mcp"
+   * Select "Add server"
 
-> 🪧 **Note:** MCP Inspector does not work if you're developing in GitHub Codespaces, due to cross-domain issues between the forwarded Inspector UI and the forwarded MCP server port.
+5. Try a prompt like:
 
-1. In a new terminal (keep the server running), launch the inspector:
-
-   ```bash
-   npx @modelcontextprotocol/inspector
+   ```text
+   What products are available in the store?
    ```
-
-2. In the Inspector UI, connect to `http://localhost:8420/mcp` using the HTTP transport.
-3. Click **Tools** to see your `list_products` and `buy_product` tools.
-4. Click a tool, fill in any arguments, and run it to see the result.
-
-> **Tip:** MCP Inspector is great for debugging — you can see exactly what your server returns without the LLM interpreting it.
-
----
-
-## Step 8: Test with MCPJam
-
-[MCPJam](https://www.mcpjam.com/) is a web-based MCP playground that lets you interact with your server through a chat-like UI. It's a nice middle ground between the raw Inspector and a full coding agent.
-
-> 🪧 **Note:** MCPJam does not work if you're developing in GitHub Codespaces, due to cross-domain issues between the forwarded Inspector UI and the forwarded MCP server port.
-
-1. Launch MCPJam locally (needed to access localhost servers):
-
-   ```bash
-   npx @mcpjam/inspector@latest
-   ```
-
-2. Open the "Servers" tab and select "Add Server". Add the local server at `http://localhost:8420/mcp`.
-3. Open the "Tools" tab and try out the server tools.
-4. Open the "Chat" tab and enter prompts like listing products and buying products.
-
----
 
 ## Take it further
 
