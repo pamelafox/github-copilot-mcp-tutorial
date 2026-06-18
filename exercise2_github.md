@@ -180,7 +180,7 @@ The GitHub MCP server's `search_code` tool lets you search across **all of GitHu
 3. Pick an interesting result and explore it:
 
    ```text
-   Use get_file_contents to read the full source of one of those quiz files. How does their approach compare to this repository's quiz.py?
+   Read the full source of one of those quiz files. How does their approach compare to this repository's quiz.py?
    ```
 
 4. Based on what you found, ask Copilot to improve the quiz:
