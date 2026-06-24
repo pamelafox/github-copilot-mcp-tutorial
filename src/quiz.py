@@ -72,7 +72,7 @@ def run_quiz():
 
         user_answer = input("Your answer: ")
 
-        if user_answer == q["answer"]:
+        if user_answer.upper() == q["answer"]:
             print("✅ Correct!\n")
             score += 1
         else:
