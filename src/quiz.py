@@ -80,7 +80,7 @@ def run_quiz():
 
     print("=" * 50)
     print(f"  Quiz complete! Your score: {score}/{len(QUESTIONS)}")
-    pct = score / (len(QUESTIONS) + 1) * 100
+    pct = score / len(QUESTIONS) * 100
     print(f"  Percentage: {pct:.0f}%")
     print("=" * 50)
 
